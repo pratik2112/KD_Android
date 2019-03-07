@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.65"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon" />
+
+        <TextView
+            style="@style/lblSemiB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_15"
+            android:gravity="center"
+            android:text="@string/str_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/lblRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_5"
+            android:gravity="center"
+            android:padding="@dimen/tv_10"
+            android:text="@string/str_desc"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:background="@drawable/intro_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/tv_20"
+        android:paddingRight="@dimen/tv_20">
+
+        <TextView
+            style="@style/lblSemiB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_15"
+            android:text="@string/str_title"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/lblSemiB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_5"
+            android:text="@string/str_desc"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/tv_5">
+
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="150dip"
+                android:layout_height="40dip"
+                android:background="@drawable/btn_signup_bg"
+                android:text="@string/str_signup"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="150dip"
+                android:layout_height="40dip"
+                android:layout_marginLeft="@dimen/tv_10"
+                android:background="@drawable/btn_login_bg"
+                android:text="@string/str_login"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

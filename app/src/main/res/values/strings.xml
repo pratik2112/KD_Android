@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">KD +</string>
+
+    <string name="noNetworkFound">You\'re not connected to the Internet. Please connect and retry. </string>
+    <string name="msg_NO_INTERNET_RESPOND">Please connect the device with internet</string>
+    <string name="msg_NO_INTERNET_TITLE">Connection error</string>
+    <string name="msg_NO_INTERNET_MSG">We can\’t reach our network right now. Please check your connection.</string>
+    <string name="msg_goto_settings">CONNECTION SETTINGS</string>
+    <string name="msg_please_wait">Please wait …</string>
+    <string name="msg_update_image">Uploading images</string>
+    <string name="msg_update_status">Update status</string>
+    <string name="msg_speed_check">Checking internet speed</string>
+    <string name="msg_server_error">Something went wrong please try again</string>
+    <string name="msg_unauthorise_error">Unauthorised Access!</string>
+
+    <string name="dialog_ok_btn">Ok</string>
+    <string name="dialog_cancel_btn">Cancel</string>
+
+    <string name="str_title">KD Digital</string>
+    <string name="str_desc">KD Digital has developed as the prominent IT products solution provider combining experience and ability to implement. </string>
+    <string name="str_login">Sign In</string>
+    <string name="str_signup">Sign Up</string>
+    <string name="str_signup1">Create KD Group account !!!</string>
+    <string name="str_or_sign">Or sign-up with</string>
+    <string name="str_already">Already registered ?</string>
+    <string name="str_dont">Don\'t registered yet ?</string>
+</resources>

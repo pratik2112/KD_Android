@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <TextView
+        style="@style/lblSemiB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_15"
+        android:text="@string/str_login"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
