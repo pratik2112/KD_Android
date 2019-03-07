@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,20 +10,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="@dimen/tv_22"
+        android:layout_marginLeft="@dimen/tv_20"
         android:layout_marginTop="@dimen/tv_10"
-        android:layout_marginRight="@dimen/tv_22"
+        android:layout_marginRight="@dimen/tv_20"
         android:layout_marginBottom="@dimen/tv_10"
-        android:layout_weight="0.15"
+        android:layout_weight="0.35"
         android:gravity="center"
         android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_icon"
+            tools:ignore="ContentDescription" />
 
         <TextView
             style="@style/lblSemiB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/tv_15"
-            android:text="@string/str_signup"
+            android:text="@string/str_signin"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_18" />
 
@@ -31,23 +38,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/tv_10"
-            android:text="@string/str_signup1"
+            android:text="@string/str_signin1"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_14" />
     </LinearLayout>
 
-    <LinearLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.77"
-        android:background="@drawable/intro_bg"
-        android:orientation="vertical"
-        android:padding="@dimen/tv_22">
+        android:layout_marginLeft="@dimen/tv_20"
+        android:layout_marginTop="@dimen/tv_10"
+        android:layout_marginRight="@dimen/tv_20"
+        android:layout_marginBottom="@dimen/tv_15"
+        android:layout_weight="0.57"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/tv_18"
+        app:cardElevation="0dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="UselessParent">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/tv_12">
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/ti_uname"
@@ -55,74 +67,44 @@
                 android:layout_height="wrap_content">
 
                 <EditText
+                    style="@style/lblRegular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/lblRegular"
-                    android:maxLines="1"
-                    android:hint="@string/str_uname"
-                    android:imeOptions="actionNext"/>
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ti_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_uname">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/lblRegular"
-                    android:maxLines="1"
-                    android:hint="@string/str_email"
-                    android:imeOptions="actionNext"/>
+                    android:hint="@string/str_uname_email"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/ti_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_email">
+                android:layout_below="@+id/ti_uname">
 
                 <EditText
+                    style="@style/lblRegular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/lblRegular"
-                    android:maxLines="1"
                     android:hint="@string/str_pwd"
-                    android:imeOptions="actionNext"/>
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ti_con_pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_pass">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/str_conf_pwd"
-                    style="@style/lblRegular"
-                    android:maxLines="1"
-                    android:imeOptions="actionDone"/>
+                    android:imeOptions="actionDone"
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
-                android:id="@+id/ll_signup"
+                android:id="@+id/ll_signin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_con_pass"
-                android:layout_marginTop="@dimen/tv_15"
+                android:layout_below="@+id/ti_pass"
+                android:layout_marginTop="@dimen/tv_10"
                 android:gravity="center"
                 android:padding="@dimen/tv_5">
 
                 <Button
-                    android:id="@+id/btn_signup"
+                    android:id="@+id/btn_signin"
                     android:layout_width="match_parent"
                     android:layout_height="40dip"
                     android:background="@drawable/btn_signup_bg"
-                    android:text="@string/str_signup"
+                    android:text="@string/str_signin"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp_15" />
@@ -132,7 +114,7 @@
                 android:id="@+id/ll_or_sign"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ll_signup"
+                android:layout_below="@+id/ll_signin"
                 android:layout_marginTop="@dimen/tv_10"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -164,8 +146,21 @@
                     android:src="@drawable/ic_gplus"
                     tools:ignore="ContentDescription" />
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_forgot"
+                style="@style/lblSemiB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_or_sign"
+                android:layout_marginTop="@dimen/tv_10"
+                android:gravity="center"
+                android:text="@string/str_forgot"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold" />
         </RelativeLayout>
-    </LinearLayout>
+    </android.support.v7.widget.CardView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -181,18 +176,18 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/str_already"
+            android:text="@string/str_dont"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/sp_14" />
 
         <TextView
-            android:id="@+id/tv_signin"
+            android:id="@+id/tv_signup"
             style="@style/lblSemiB"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/tv_10"
             android:gravity="center"
-            android:text="@string/str_signin"
+            android:text="@string/str_signup"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/sp_15"
             android:textStyle="bold" />

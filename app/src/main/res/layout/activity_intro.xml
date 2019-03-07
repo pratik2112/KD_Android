@@ -88,12 +88,12 @@
                 android:textSize="@dimen/sp_16" />
 
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_signin"
                 android:layout_width="150dip"
                 android:layout_height="40dip"
                 android:layout_marginLeft="@dimen/tv_10"
                 android:background="@drawable/btn_login_bg"
-                android:text="@string/str_login"
+                android:text="@string/str_signin"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/sp_16" />

@@ -15,13 +15,24 @@
 
     <string name="dialog_ok_btn">Ok</string>
     <string name="dialog_cancel_btn">Cancel</string>
+    <string name="msg_press_back_twice">Double tab to back</string>
+    <string name="no_record_found">No record found.</string>
 
     <string name="str_title">KD Digital</string>
     <string name="str_desc">KD Digital has developed as the prominent IT products solution provider combining experience and ability to implement. </string>
-    <string name="str_login">Sign In</string>
+    <string name="str_forgot">Forgot Password ?</string>
+    <string name="str_reset">Reset Password</string>
+    <string name="str_signin">Sign In</string>
     <string name="str_signup">Sign Up</string>
+    <string name="str_signin1">Welcome to KD Group !!!</string>
     <string name="str_signup1">Create KD Group account !!!</string>
     <string name="str_or_sign">Or sign-up with</string>
     <string name="str_already">Already registered ?</string>
     <string name="str_dont">Don\'t registered yet ?</string>
+
+    <string name="str_uname">Username</string>
+    <string name="str_uname_email">Username / Email</string>
+    <string name="str_email">Email</string>
+    <string name="str_pwd">Password</string>
+    <string name="str_conf_pwd">Confirm Password</string>
 </resources>

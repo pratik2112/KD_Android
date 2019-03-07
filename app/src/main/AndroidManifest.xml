@@ -32,12 +32,17 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".activity.SigninActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme_Action"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
             android:name=".activity.SignupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Action"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.ForgotActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme_Action"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />

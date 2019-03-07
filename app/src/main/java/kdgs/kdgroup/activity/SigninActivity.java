@@ -8,7 +8,7 @@ import kdgs.kdgroup.R;
 import kdgs.kdgroup.base.BaseActivity;
 import kdgs.kdgroup.config.CommonFunctions;
 
-public class SignupActivity extends BaseActivity {
+public class SigninActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class SignupActivity extends BaseActivity {
 
     @Override
     protected int getContentView() {
-        return R.layout.activity_signup;
+        return R.layout.activity_signin;
     }
 
     private void inticompnets() {
@@ -32,9 +32,15 @@ public class SignupActivity extends BaseActivity {
         }
     }
 
-    @OnClick(R.id.tv_signin)
-    public void signinClick() {
-        startActivity(new Intent(SignupActivity.this, SigninActivity.class));
+    @OnClick(R.id.tv_signup)
+    public void signupClick() {
+        startActivity(new Intent(SigninActivity.this, SignupActivity.class));
+        finish();
+    }
+
+    @OnClick(R.id.tv_forgot)
+    public void forgotClick() {
+        startActivity(new Intent(SigninActivity.this, ForgotActivity.class));
         finish();
     }
 

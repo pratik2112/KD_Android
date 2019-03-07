@@ -49,14 +49,17 @@
     </style>
 
     <style name="lblLight">
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:fontFamily">@font/latolight</item>
     </style>
 
     <style name="lblRegular">
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:fontFamily">@font/latoregular</item>
     </style>
 
     <style name="lblSemiB">
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:fontFamily">@font/latosemibold</item>
     </style>
 </resources>
