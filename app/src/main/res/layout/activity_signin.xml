@@ -67,12 +67,15 @@
                 android:layout_height="wrap_content">
 
                 <EditText
+                    android:id="@+id/edt_uname"
                     style="@style/lblRegular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/str_uname_email"
                     android:imeOptions="actionNext"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:nextFocusForward="@+id/ti_pass"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -82,12 +85,14 @@
                 android:layout_below="@+id/ti_uname">
 
                 <EditText
+                    android:id="@+id/edt_pass"
                     style="@style/lblRegular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/str_pwd"
                     android:imeOptions="actionDone"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
