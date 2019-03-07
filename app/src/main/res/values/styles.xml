@@ -62,4 +62,20 @@
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:fontFamily">@font/latosemibold</item>
     </style>
+
+    <style name="AppTheme_Action.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme_Action.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme_Action.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/latoregular</item>
+    </style>
 </resources>

@@ -46,6 +46,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme_Action"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:label="@string/str_m_dashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Action.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
     </application>
 
 </manifest>

@@ -9,9 +9,14 @@
     <color name="black">#000</color>
     <color name="red">#ff0665</color>
 
+    <color name="white_80">#8cFFFFFF</color>
     <color name="black_80">#8c000000</color>
     <color name="textColorPrimary">#ff333333</color>
     <color name="textColorSecondary">#ff757575</color>
     <color name="transparent">#00000000</color>
     <color name="divider">#424242</color>
+
+    <!-- Drawer Menu -->
+    <color name="drawer_item_checked">@color/colorPrimary</color>
+    <color name="drawer_item_default">@color/white</color>
 </resources>

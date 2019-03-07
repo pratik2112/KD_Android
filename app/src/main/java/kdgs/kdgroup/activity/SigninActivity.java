@@ -32,6 +32,12 @@ public class SigninActivity extends BaseActivity {
         }
     }
 
+    @OnClick(R.id.btn_signin)
+    public void signinClick() {
+        startActivity(new Intent(SigninActivity.this, DashboardActivity.class));
+        finish();
+    }
+
     @OnClick(R.id.tv_signup)
     public void signupClick() {
         startActivity(new Intent(SigninActivity.this, SignupActivity.class));

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="@dimen/tv_15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <kdgs.kdgroup.utills.CircleImageView
+                android:id="@+id/nav_img_profile_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginRight="@dimen/tv_10"
+                android:src="@drawable/unknown"
+                app:border_color="@color/divider"
+                app:border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/tv_8"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/lblSemiB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="KD Group"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_uname"
+                    style="@style/lblRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tv_5"
+                    android:maxLines="1"
+                    android:text="Username"
+                    android:textColor="@color/white_80"
+                    android:textSize="@dimen/sp_13" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/lblRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_15"
+            android:drawableLeft="@drawable/ic_call"
+            android:drawablePadding="@dimen/tv_10"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="(981)-000-1234"
+            android:textColor="@color/white_80"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/lblRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_5"
+            android:drawableLeft="@drawable/ic_mail"
+            android:drawablePadding="@dimen/tv_10"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="kdgroup@gmail.com"
+            android:textColor="@color/white_80"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="@dimen/tv_1"
+            android:layout_weight="0.5"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/lblSemiB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="( 5 )"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/lblRegular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Solved"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/tv_1"
+            android:layout_marginRight="2dp"
+            android:layout_weight="0.5"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/lblSemiB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="( 16 )"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/lblRegular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Complaints"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

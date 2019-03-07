@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_trans"
+            android:title="@string/str_m_dashboard" />
+        <item
+            android:id="@+id/nav_comp"
+            android:icon="@drawable/ic_trans"
+            android:title="@string/str_m_comp" />
+        <item
+            android:id="@+id/nav_comp_his"
+            android:icon="@drawable/ic_trans"
+            android:title="@string/str_m_comp_his" />
+        <item
+            android:id="@+id/nav_chng_pwd"
+            android:icon="@drawable/ic_trans"
+            android:title="@string/str_m_chng_pwd" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_trans"
+            android:title="@string/str_m_prof" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_trans"
+            android:title="@string/str_m_logout" />
+    </group>
+</menu>

@@ -37,4 +37,14 @@
     <string name="str_email">Email</string>
     <string name="str_pwd">Password</string>
     <string name="str_conf_pwd">Confirm Password</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="str_m_dashboard">Dashboard</string>
+    <string name="str_m_comp_his">Complain History</string>
+    <string name="str_m_comp">Complain</string>
+    <string name="str_m_chng_pwd">Change Password</string>
+    <string name="str_m_prof">Profile</string>
+    <string name="str_m_logout">Logout</string>
 </resources>

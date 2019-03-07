@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+    <attr name="drawableLeftCompat" format="reference" />
+    <attr name="drawableRightCompat" format="reference" />
+    <attr name="drawableTopCompat" format="reference" />
+    <attr name="drawableBottomCompat" format="reference" />
+
+    <declare-styleable name="MaterialSpinner">
+        <attr name="ms_baseColor" format="integer" />
+        <attr name="ms_highlightColor" format="integer" />
+        <attr name="ms_errorColor" format="integer" />
+        <attr name="ms_error" format="string" />
+        <attr name="ms_hint" format="string" />
+        <attr name="ms_hintColor" format="color" />
+        <attr name="ms_floatingLabelText" format="string" />
+        <attr name="ms_floatingLabelColor" format="color" />
+        <attr name="ms_multiline" format="boolean" />
+        <attr name="ms_nbErrorLines" format="integer" />
+        <attr name="ms_alignLabels" format="boolean" />
+        <attr name="ms_thickness" format="dimension" />
+        <attr name="ms_thickness_error" format="dimension" />
+        <attr name="ms_arrowSize" format="dimension" />
+        <attr name="ms_arrowColor" format="color" />
+        <attr name="ms_enableFloatingLabel" format="boolean" />
+        <attr name="ms_enableErrorLabel" format="boolean" />
+        <attr name="ms_isRtl" format="boolean" />
+    </declare-styleable>
+
+    <!-- Material Rating Bar -->
+    <declare-styleable name="MaterialRatingBar">
+        <attr name="mrb_progressTint" format="color|reference" />
+        <attr name="mrb_progressTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_secondaryProgressTint" format="color|reference" />
+        <attr name="mrb_secondaryProgressTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_progressBackgroundTint" format="color|reference" />
+        <attr name="mrb_progressBackgroundTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="mrb_indeterminateTint" format="color|reference" />
+        <attr name="mrb_indeterminateTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+    </declare-styleable>
+
+    <!-- =========== -->
+
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <attr name="indicatorGravity">
+        <!-- Push object to the top of its container, not changing its size. -->
+        <flag name="top" value="0x30" />
+        <!-- Push object to the bottom of its container, not changing its size. -->
+        <flag name="bottom" value="0x50" />
+        <!-- Push object to the left of its container, not changing its size. -->
+        <flag name="left" value="0x03" />
+        <!-- Push object to the right of its container, not changing its size. -->
+        <flag name="right" value="0x05" />
+        <!-- Place object in the vertical center of its container, not changing its size. -->
+        <flag name="center_vertical" value="0x10" />
+        <!-- Place object in the horizontal center of its container, not changing its size. -->
+        <flag name="center_horizontal" value="0x01" />
+        <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+        <flag name="center" value="0x11" />
+        <!-- Push object to the beginning of its container, not changing its size. -->
+        <flag name="start" value="0x00800003" />
+        <!-- Push object to the end of its container, not changing its size. -->
+        <flag name="end" value="0x00800005" />
+    </attr>
+
+    <attr name="indicatorOrientation">
+        <enum name="horizontal" value="0" />
+        <enum name="vertical" value="1" />
+    </attr>
+
+    <attr name="pageTransformer">
+        <enum name="flow" value="0" />
+        <enum name="depth" value="1" />
+        <enum name="zoom" value="2" />
+        <enum name="slide_over" value="3" />
+    </attr>
+
+    <attr name="centered" format="boolean" />
+    <attr name="strokeWidth" format="dimension" />
+    <attr name="slideInterval" format="integer" />
+    <attr name="pageTransformInterval" format="integer" />
+    <attr name="fillColor" format="color" />
+    <attr name="pageColor" format="color" />
+    <attr name="radius" format="dimension" />
+    <attr name="snap" format="boolean" />
+    <attr name="strokeColor" format="color" />
+    <attr name="autoPlay" format="boolean" />
+    <attr name="disableAutoPlayOnUserInteraction" format="boolean" />
+    <attr name="indicatorMarginHorizontal" format="dimension" />
+    <attr name="indicatorMarginVertical" format="dimension" />
+    <attr name="animateOnBoundary" format="boolean" />
+
+    <declare-styleable name="CirclePageIndicator">
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" />
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor" />
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" />
+        <!-- Orientation of the indicator. -->
+        <attr name="android:orientation" />
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" />
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" />
+        <!-- Color of the open circles. -->
+        <attr name="strokeColor" />
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="strokeWidth" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="CarouselView">
+        <!-- Interval of the indicator to slide. -->
+        <attr name="slideInterval" />
+        <!-- Gravity of the indicator.  (Just like layout_gravity)-->
+        <attr name="indicatorGravity" />
+        <!-- Orientation of the indicator. -->
+        <attr name="indicatorOrientation" />
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor" />
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" />
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" />
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" />
+        <!-- Color of the open circles. -->
+        <attr name="strokeColor" />
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="strokeWidth" />
+        <!-- Enable/Disable auto scrolling of views. default: true -->
+        <attr name="autoPlay" />
+        <!-- Disables auto scrolling when user interacts. default: false -->
+        <attr name="disableAutoPlayOnUserInteraction" />
+        <!-- Sets horizontal margin for Indicator in Carousel View. -->
+        <attr name="indicatorMarginHorizontal" />
+        <!-- Sets vertical margin for Indicator in Carousel View. -->
+        <attr name="indicatorMarginVertical" />
+        <!-- Sets speed at which page will slide from one to another in milliseconds. -->
+        <attr name="pageTransformInterval" />
+        <!-- Sets page transition animation. -->
+        <attr name="pageTransformer" />
+        <!-- Sets whether to animate transition from last position to first or not. -->
+        <attr name="animateOnBoundary" />
+    </declare-styleable>
+
+    <declare-styleable name="ChipView">
+        <attr name="label" format="string" />
+        <attr name="labelColor" format="color" />
+        <attr name="hasAvatarIcon" format="boolean" />
+        <attr name="avatarIcon" format="reference" />
+        <attr name="deletable" format="boolean" />
+        <attr name="deleteIcon" format="reference" />
+        <attr name="deleteIconColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ChipsInput">
+        <attr name="hint" format="string" />
+        <attr name="hintColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="maxRows" format="integer" />
+        <attr name="chip_labelColor" format="color" />
+        <attr name="chip_hasAvatarIcon" format="boolean" />
+        <attr name="chip_deletable" format="boolean" />
+        <attr name="chip_deleteIcon" format="reference" />
+        <attr name="chip_deleteIconColor" format="color" />
+        <attr name="chip_backgroundColor" format="color" />
+        <attr name="showChipDetailed" format="boolean" />
+        <attr name="chip_detailed_textColor" format="color" />
+        <attr name="chip_detailed_backgroundColor" format="color" />
+        <attr name="chip_detailed_deleteIconColor" format="color" />
+        <attr name="filterable_list_backgroundColor" format="color" />
+        <attr name="filterable_list_textColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ScrollViewMaxHeight">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+</resources>
