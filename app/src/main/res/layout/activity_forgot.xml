@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/tv_10"
-            android:text="@string/str_signin1"
+            android:text="@string/str_reset1"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_14" />
     </LinearLayout>
@@ -111,8 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/str_already"
-            android:textColor="@color/colorPrimary"
+            android:text="@string/str_return"
             android:textSize="@dimen/sp_14" />
 
         <TextView
@@ -123,7 +122,6 @@
             android:layout_marginLeft="@dimen/tv_10"
             android:gravity="center"
             android:text="@string/str_signin"
-            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/sp_15"
             android:textStyle="bold" />
     </LinearLayout>

@@ -128,7 +128,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/str_or_sign"
-                    android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/sp_15" />
 
                 <ImageView
@@ -177,7 +176,6 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="@string/str_dont"
-            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/sp_14" />
 
         <TextView
@@ -188,7 +186,6 @@
             android:layout_marginLeft="@dimen/tv_10"
             android:gravity="center"
             android:text="@string/str_signup"
-            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/sp_15"
             android:textStyle="bold" />
     </LinearLayout>

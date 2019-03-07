@@ -22,13 +22,15 @@
     <string name="str_desc">KD Digital has developed as the prominent IT products solution provider combining experience and ability to implement. </string>
     <string name="str_forgot">Forgot Password ?</string>
     <string name="str_reset">Reset Password</string>
+    <string name="str_reset1">Please enter your KD+ ID to help us identify you. So we will send you link to your email.</string>
     <string name="str_signin">Sign In</string>
     <string name="str_signup">Sign Up</string>
     <string name="str_signin1">Welcome to KD Group !!!</string>
     <string name="str_signup1">Create KD Group account !!!</string>
     <string name="str_or_sign">Or sign-up with</string>
-    <string name="str_already">Already registered ?</string>
-    <string name="str_dont">Don\'t registered yet ?</string>
+    <string name="str_already">Already have a KD+ ID ?</string>
+    <string name="str_dont">Not a member yet ?</string>
+    <string name="str_return">Return to</string>
 
     <string name="str_uname">Username</string>
     <string name="str_uname_email">Username / Email</string>
