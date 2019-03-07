@@ -26,6 +26,10 @@
             android:icon="@drawable/ic_trans"
             android:title="@string/str_m_prof" />
         <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_trans"
+            android:title="@string/str_m_contact" />
+        <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_trans"
             android:title="@string/str_m_logout" />

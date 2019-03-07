@@ -46,5 +46,12 @@
     <string name="str_m_comp">Complain</string>
     <string name="str_m_chng_pwd">Change Password</string>
     <string name="str_m_prof">Profile</string>
+    <string name="str_m_share">Share</string>
+    <string name="str_m_contact">Contact Us</string>
     <string name="str_m_logout">Logout</string>
+
+    <string name="subject">Just Try KD Group App at:</string>
+    <string name="google_url">https://play.google.com/store/apps/details?id=</string>
+
+    <string name="storage_permission1">If you reject permission, you can not use this call feature.</string>
 </resources>
