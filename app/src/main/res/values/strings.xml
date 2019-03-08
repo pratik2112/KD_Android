@@ -21,6 +21,14 @@
     <string name="str_title">KD Digital</string>
     <string name="str_desc">KD Digital has developed as the prominent IT products solution provider combining experience and ability to implement. </string>
     <string name="str_forgot">Forgot Password ?</string>
+    <string name="str_send_otp">Send OTP</string>
+    <string name="str_verify_otp">Verify OTP</string>
+    <string name="str_enter_otp">Enter OTP</string>
+    <string name="str_resend">Resend</string>
+    <string name="str_verify">Verify</string>
+    <string name="str_submit">Submit</string>
+    <string name="str_reset_msg">Your password is reset.</string>
+    <string name="str_dialog_title">Message From KD +</string>
     <string name="str_reset">Reset Password</string>
     <string name="str_reset1">Please enter your KD+ ID to help us identify you. So we will send you link to your email.</string>
     <string name="str_signin">Sign In</string>
@@ -35,8 +43,22 @@
     <string name="str_uname">Username</string>
     <string name="str_uname_email">Username / Email</string>
     <string name="str_email">Email</string>
+    <string name="str_mobile">Mobile Number</string>
     <string name="str_pwd">Password</string>
     <string name="str_conf_pwd">Confirm Password</string>
+
+    <string name="str_select_email">Select Email Account</string>
+    <string name="str_step1">Step 1: User Login Details</string>
+    <string name="str_step2">Step 2: Verify Email Address</string>
+    <string name="str_step3">Step 3: Account Completion</string>
+    <string name="str_register_complet">Your registration has been completed successfully.</string>
+    <string name="str_note">
+        <![CDATA[
+            <p><strong>Next Step:</strong> Please verify your email address<br>
+            <strong> %s </strong></p>
+            <p><strong>Note: </strong> If you don\'t receive the confirmation message within a few minutes of signing up, please check your Spam/Junk/Bulk Mail folder. If you are still unable to locate the email, please enter the valide email address that was entered during registration.</p>
+        ]]>
+    </string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

@@ -56,6 +56,7 @@
         app:cardElevation="0dp">
 
         <RelativeLayout
+            android:id="@+id/rl_send_otp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -74,11 +75,10 @@
                     android:hint="@string/str_uname_email"
                     android:imeOptions="actionDone"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
-                android:id="@+id/ll_reset"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ti_uname"
@@ -87,11 +87,131 @@
                 android:padding="@dimen/tv_5">
 
                 <Button
-                    android:id="@+id/btn_signin"
+                    android:id="@+id/btn_send_otp"
                     android:layout_width="match_parent"
                     android:layout_height="40dip"
                     android:background="@drawable/btn_signup_bg"
-                    android:text="@string/str_reset"
+                    android:text="@string/str_send_otp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_15" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_verify_otp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/tv_12"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_verify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edt_verify"
+                    style="@style/lblRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_enter_otp"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ti_verify"
+                android:layout_marginTop="@dimen/tv_10"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/tv_5">
+
+                <Button
+                    android:id="@+id/btn_resend"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_signup_bg"
+                    android:text="@string/str_resend"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_15" />
+
+                <Button
+                    android:id="@+id/btn_verify"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="@dimen/tv_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_signup_bg"
+                    android:text="@string/str_verify"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_15" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_reset_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/tv_12"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edt_pwd"
+                    style="@style/lblRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_pwd"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:nextFocusForward="@+id/ti_conf_pwd"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_conf_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ti_pwd">
+
+                <EditText
+                    android:id="@+id/edt_conf_pwd"
+                    style="@style/lblRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_conf_pwd"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ti_conf_pwd"
+                android:layout_marginTop="@dimen/tv_10"
+                android:gravity="center"
+                android:padding="@dimen/tv_5">
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/btn_signup_bg"
+                    android:text="@string/str_submit"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp_15" />
