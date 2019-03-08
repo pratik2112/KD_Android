@@ -20,6 +20,12 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_dashboard" />
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tablayout"
+        android:layout_below="@+id/toolbar"
+        app:layout_behavior="kdgs.kdgroup.utills.FixScrollingFooterBehaviour" />
 
 </android.support.design.widget.CoordinatorLayout>

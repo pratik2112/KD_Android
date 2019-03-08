@@ -5,6 +5,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,6 +16,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
@@ -27,8 +32,10 @@ import kdgs.kdgroup.R;
 import kdgs.kdgroup.base.BaseActivity;
 import kdgs.kdgroup.config.CommonFunctions;
 import kdgs.kdgroup.config.Constants;
+import kdgs.kdgroup.fragment.DashboardFragment;
+import kdgs.kdgroup.fragment.ProfileFragment;
 
-public class DashboardActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class DashboardActivity extends BaseActivity implements OnNavigationItemSelectedListener {
 
     @BindView(R.id.nav_view)
     NavigationView navigationView;
@@ -47,8 +54,7 @@ public class DashboardActivity extends BaseActivity implements NavigationView.On
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        addFragment(new DashboardFragment());
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -97,14 +103,30 @@ public class DashboardActivity extends BaseActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_dashboard) {
-        } else if (id == R.id.nav_comp) {
-
-        } else if (id == R.id.nav_comp_his) {
-
-        } else if (id == R.id.nav_chng_pwd) {
-
+            DashboardFragment dashboardFragment = new DashboardFragment();
+            FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
+            transaction.setCustomAnimations(
+                    R.anim.push_left_in,
+                    R.anim.push_left_out,
+                    R.anim.push_left_in,
+                    R.anim.push_left_out);
+            transaction.replace(R.id.frame_container, dashboardFragment);
+            transaction.addToBackStack(null);
+            transaction.commitAllowingStateLoss();
+            drawer.closeDrawer(GravityCompat.START);
         } else if (id == R.id.nav_profile) {
-
+            ProfileFragment profileFragment = new ProfileFragment();
+            FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
+            transaction.setCustomAnimations(
+                    R.anim.push_left_in,
+                    R.anim.push_left_out,
+                    R.anim.push_left_in,
+                    R.anim.push_left_out);
+            transaction.replace(R.id.frame_container, profileFragment);
+            transaction.addToBackStack(null);
+            transaction.commitAllowingStateLoss();
+            drawer.closeDrawer(GravityCompat.START);
+        } else if (id == R.id.nav_comp) {
         } else if (id == R.id.nav_contact) {
             callPermissionListeners();
         } else if (id == R.id.nav_logout) {
@@ -113,6 +135,13 @@ public class DashboardActivity extends BaseActivity implements NavigationView.On
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void addFragment(Fragment fragment) {
+        getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frame_container, fragment, null);
+        ft.commitAllowingStateLoss();
     }
 
     private void shareApp() {

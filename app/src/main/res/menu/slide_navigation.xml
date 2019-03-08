@@ -7,31 +7,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_dashboard"
-            android:icon="@drawable/ic_trans"
+            android:icon="@drawable/home"
             android:title="@string/str_m_dashboard" />
         <item
-            android:id="@+id/nav_comp"
-            android:icon="@drawable/ic_trans"
-            android:title="@string/str_m_comp" />
-        <item
-            android:id="@+id/nav_comp_his"
-            android:icon="@drawable/ic_trans"
-            android:title="@string/str_m_comp_his" />
-        <item
-            android:id="@+id/nav_chng_pwd"
-            android:icon="@drawable/ic_trans"
-            android:title="@string/str_m_chng_pwd" />
-        <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_trans"
+            android:icon="@drawable/profile"
             android:title="@string/str_m_prof" />
         <item
+            android:id="@+id/nav_comp"
+            android:icon="@drawable/complaint"
+            android:title="@string/str_m_comp" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/feedback"
+            android:title="@string/str_m_feedback" />
+        <item
             android:id="@+id/nav_contact"
-            android:icon="@drawable/ic_trans"
+            android:icon="@drawable/call"
             android:title="@string/str_m_contact" />
         <item
             android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_trans"
+            android:icon="@drawable/logout"
             android:title="@string/str_m_logout" />
     </group>
 </menu>

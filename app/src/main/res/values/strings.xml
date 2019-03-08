@@ -15,6 +15,7 @@
 
     <string name="dialog_ok_btn">Ok</string>
     <string name="dialog_cancel_btn">Cancel</string>
+    <string name="dialog_clear_btn">Clear</string>
     <string name="msg_press_back_twice">Double tab to back</string>
     <string name="no_record_found">No record found.</string>
 
@@ -64,13 +65,16 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="str_m_dashboard">Dashboard</string>
-    <string name="str_m_comp_his">Complain History</string>
-    <string name="str_m_comp">Complain</string>
-    <string name="str_m_chng_pwd">Change Password</string>
     <string name="str_m_prof">Profile</string>
+    <string name="str_m_chng_pwd">Change Password</string>
     <string name="str_m_share">Share</string>
     <string name="str_m_contact">Contact Us</string>
+    <string name="str_m_feedback">Feedback</string>
     <string name="str_m_logout">Logout</string>
+    <string name="str_m_comp">Complaint</string>
+    <string name="str_comp_recnt">Recent Complaints</string>
+    <string name="str_comp_stat">Check Complaint Status</string>
+    <string name="str_tic_no">Ticket No.</string>
 
     <string name="subject">Just Try KD Group App at:</string>
     <string name="google_url">https://play.google.com/store/apps/details?id=</string>
