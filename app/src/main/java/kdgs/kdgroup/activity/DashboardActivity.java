@@ -16,7 +16,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
@@ -31,9 +30,7 @@ import butterknife.BindView;
 import kdgs.kdgroup.R;
 import kdgs.kdgroup.base.BaseActivity;
 import kdgs.kdgroup.config.CommonFunctions;
-import kdgs.kdgroup.config.Constants;
 import kdgs.kdgroup.fragment.DashboardFragment;
-import kdgs.kdgroup.fragment.ProfileFragment;
 
 public class DashboardActivity extends BaseActivity implements OnNavigationItemSelectedListener {
 
@@ -101,37 +98,37 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
+        FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
+        switch (id) {
+            case R.id.nav_dashboard:
+                if(toolbar != null)
+                    toolbar.setTitle(getString(R.string.str_m_dashboard));
 
-        if (id == R.id.nav_dashboard) {
-            DashboardFragment dashboardFragment = new DashboardFragment();
-            FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
-            transaction.setCustomAnimations(
-                    R.anim.push_left_in,
-                    R.anim.push_left_out,
-                    R.anim.push_left_in,
-                    R.anim.push_left_out);
-            transaction.replace(R.id.frame_container, dashboardFragment);
-            transaction.addToBackStack(null);
-            transaction.commitAllowingStateLoss();
-            drawer.closeDrawer(GravityCompat.START);
-        } else if (id == R.id.nav_profile) {
-            ProfileFragment profileFragment = new ProfileFragment();
-            FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
-            transaction.setCustomAnimations(
-                    R.anim.push_left_in,
-                    R.anim.push_left_out,
-                    R.anim.push_left_in,
-                    R.anim.push_left_out);
-            transaction.replace(R.id.frame_container, profileFragment);
-            transaction.addToBackStack(null);
-            transaction.commitAllowingStateLoss();
-            drawer.closeDrawer(GravityCompat.START);
-        } else if (id == R.id.nav_comp) {
-        } else if (id == R.id.nav_contact) {
-            callPermissionListeners();
-        } else if (id == R.id.nav_logout) {
-            startActivity(new Intent(this, SigninActivity.class));
-            this.finish();
+                DashboardFragment dashboardFragment = new DashboardFragment();
+                transaction.setCustomAnimations(
+                        R.anim.push_left_in,
+                        R.anim.push_left_out,
+                        R.anim.push_left_in,
+                        R.anim.push_left_out);
+                transaction.replace(R.id.frame_container, dashboardFragment);
+                transaction.addToBackStack(null);
+                transaction.commitAllowingStateLoss();
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.nav_profile:
+                startActivity(new Intent(this, ProfileActivity.class));
+                break;
+            case R.id.nav_comp:
+                if(toolbar != null)
+                    toolbar.setTitle(getString(R.string.str_m_comp));
+                break;
+            case R.id.nav_contact:
+                callPermissionListeners();
+                break;
+            case R.id.nav_logout:
+                startActivity(new Intent(this, SigninActivity.class));
+                this.finish();
+                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;

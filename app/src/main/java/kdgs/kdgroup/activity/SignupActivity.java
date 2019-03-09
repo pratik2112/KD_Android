@@ -3,6 +3,7 @@ package kdgs.kdgroup.activity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.text.Html;
 import android.view.View;
 import android.widget.EditText;
@@ -16,6 +17,8 @@ import kdgs.kdgroup.R;
 import kdgs.kdgroup.base.BaseActivity;
 import kdgs.kdgroup.config.CommonFunctions;
 
+import static kdgs.kdgroup.config.CommonFunctions.validateEmailAddress;
+
 public class SignupActivity extends BaseActivity {
 
     @BindView(R.id.rl_step1)
@@ -26,6 +29,8 @@ public class SignupActivity extends BaseActivity {
     RelativeLayout rl_step3;
     @BindView(R.id.tv_note)
     TextView tv_note;
+    @BindView(R.id.ti_email)
+    TextInputLayout ti_email;
     @BindView(R.id.edt_email)
     EditText edt_email;
     @BindView(R.id.ll_email_confirm)
@@ -58,9 +63,14 @@ public class SignupActivity extends BaseActivity {
 
     @OnClick(R.id.btn_submit)
     public void submitClick() {
-        rl_step1.setVisibility(View.GONE);
-        rl_step2.setVisibility(View.VISIBLE);
-        rl_step3.setVisibility(View.GONE);
+        String username = edt_email.getText().toString();
+        if (!validateEmailAddress(username)) {
+            ti_email.setError("Not a valid email address!");
+        } else {
+            rl_step1.setVisibility(View.GONE);
+            rl_step2.setVisibility(View.VISIBLE);
+            rl_step3.setVisibility(View.GONE);
+        }
     }
 
     @OnClick(R.id.btn_verify)

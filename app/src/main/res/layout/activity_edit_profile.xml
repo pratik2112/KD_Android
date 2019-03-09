@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_lay" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/tv_10"
+        android:layout_marginTop="@dimen/tv_10"
+        android:layout_marginRight="@dimen/tv_10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/tv_5"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tv_10"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_fname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edt_fname"
+                    style="@style/lblRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_fname"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:nextFocusForward="@+id/ti_new_pass"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_lname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edt_lname"
+                    style="@style/lblRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_lname"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:nextFocusForward="@+id/ti_conf_pass"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/tv_10"
+        android:layout_marginTop="@dimen/tv_10"
+        android:layout_marginRight="@dimen/tv_10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/tv_5"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tv_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/lblRegular"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/str_gender"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_male"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:padding="@dimen/tv_8"
+                android:src="@drawable/ic_g_male" />
+
+            <ImageView
+                android:id="@+id/iv_female"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_marginLeft="@dimen/tv_10"
+                android:padding="@dimen/tv_8"
+                android:src="@drawable/ic_g_female" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/tv_10"
+        android:layout_marginTop="@dimen/tv_10"
+        android:layout_marginRight="@dimen/tv_10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/tv_5"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_margin="@dimen/tv_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/lblRegular"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:text="@string/str_dob"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_dob"
+                style="@style/lblRegular"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/str_dmy"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

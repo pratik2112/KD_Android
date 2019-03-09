@@ -91,6 +91,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/str_pwd"
                     android:imeOptions="actionDone"
+                    android:inputType="textPassword"
                     android:maxLines="1"
                     android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>

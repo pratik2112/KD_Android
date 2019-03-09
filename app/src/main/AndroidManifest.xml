@@ -16,7 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme_Action"
         tools:ignore="GoogleAppIndexingWarning">
-
         <activity
             android:name=".activity.SplashActivity"
             android:screenOrientation="portrait"
@@ -52,6 +51,24 @@
             android:label="@string/str_m_dashboard"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme_Action.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:label="@string/str_m_prof"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Action"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.ChangePasswordActivity"
+            android:label="@string/str_m_chng_pwd"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Action"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:label="@string/str_m_edt_prof"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Action"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
     </application>
 

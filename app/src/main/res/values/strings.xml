@@ -28,6 +28,7 @@
     <string name="str_resend">Resend</string>
     <string name="str_verify">Verify</string>
     <string name="str_submit">Submit</string>
+    <string name="str_update">Update</string>
     <string name="str_reset_msg">Your password is reset.</string>
     <string name="str_dialog_title">Message From KD +</string>
     <string name="str_reset">Reset Password</string>
@@ -41,12 +42,17 @@
     <string name="str_dont">Not a member yet ?</string>
     <string name="str_return">Return to</string>
 
+    <string name="str_fname">Firstname</string>
+    <string name="str_lname">Lastname</string>
     <string name="str_uname">Username</string>
+    <string name="str_gender">Select Gender</string>
     <string name="str_uname_email">Username / Email</string>
-    <string name="str_email">Email</string>
+    <string name="str_email">Email Address</string>
     <string name="str_mobile">Mobile Number</string>
     <string name="str_pwd">Password</string>
     <string name="str_conf_pwd">Confirm Password</string>
+    <string name="str_old_pwd">Old Password</string>
+    <string name="str_new_pwd">New Password</string>
 
     <string name="str_select_email">Select Email Account</string>
     <string name="str_step1">Step 1: User Login Details</string>
@@ -66,6 +72,7 @@
 
     <string name="str_m_dashboard">Dashboard</string>
     <string name="str_m_prof">Profile</string>
+    <string name="str_m_edt_prof">Edit Profile</string>
     <string name="str_m_chng_pwd">Change Password</string>
     <string name="str_m_share">Share</string>
     <string name="str_m_contact">Contact Us</string>
@@ -75,6 +82,11 @@
     <string name="str_comp_recnt">Recent Complaints</string>
     <string name="str_comp_stat">Check Complaint Status</string>
     <string name="str_tic_no">Ticket No.</string>
+
+    <string name="str_dob">Date of Birth</string>
+    <string name="str_dmy">DD-MM-YYYY</string>
+    <string name="str_p_adrs">Primary Address</string>
+    <string name="str_s_adrs">Secondary Address</string>
 
     <string name="subject">Just Try KD Group App at:</string>
     <string name="google_url">https://play.google.com/store/apps/details?id=</string>
