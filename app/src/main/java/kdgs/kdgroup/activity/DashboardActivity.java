@@ -121,11 +121,10 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
                 startActivity(new Intent(this, ProfileActivity.class));
                 break;
             case R.id.nav_comp:
-                if (toolbar != null)
-                    toolbar.setTitle(getString(R.string.str_m_comp));
+                startActivity(new Intent(this, ComplaintActivity.class));
                 break;
             case R.id.nav_contact:
-                if (CommonFunctions.getPreference(DashboardActivity.this, Constants.callPermission, false)){
+                if (CommonFunctions.getPreference(DashboardActivity.this, Constants.callPermission, false)) {
                     Intent intent = new Intent(Intent.ACTION_DIAL);
                     intent.setData(Uri.parse("tel:9999999999"));
                     startActivity(intent);

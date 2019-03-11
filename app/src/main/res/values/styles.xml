@@ -72,10 +72,21 @@
 
     <style name="AppTheme_Action.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-
     <style name="NavigationDrawerStyle">
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/latoregular</item>
+    </style>
+
+    <!-- Tablayout -->
+    <style name="MyTabLayout" parent="Base.Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyTabLayoutTextAppearance</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">@font/latoregular</item>
     </style>
 </resources>

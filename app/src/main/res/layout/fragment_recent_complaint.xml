@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_complaint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_5"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:id="@+id/ll_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:padding="@dimen/tv_10"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/lblRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/logo_w"
+            android:drawablePadding="@dimen/tv_10"
+            android:gravity="center"
+            android:text="@string/msg_kd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17" />
+
+        <TextView
+            style="@style/lblRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_5"
+            android:gravity="center"
+            android:text="@string/no_record_found"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</LinearLayout>

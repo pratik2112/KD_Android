@@ -73,6 +73,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/str_uname_email"
                     android:imeOptions="actionNext"
+                    android:inputType="text"
                     android:maxLines="1"
                     android:nextFocusForward="@+id/ti_pass"
                     android:singleLine="true" />

@@ -46,6 +46,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/str_fname"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:nextFocusForward="@+id/ti_lname"
                             android:singleLine="true" />
@@ -63,6 +64,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/str_lname"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:nextFocusForward="@+id/ti_fl_no"
                             android:singleLine="true" />
@@ -195,6 +197,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/str_f_no"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:nextFocusForward="@+id/ti_so_aprt"
                             android:singleLine="true" />
@@ -213,6 +216,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/str_apart"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:nextFocusForward="@+id/ti_adrs"
                             android:singleLine="true" />
@@ -231,6 +235,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/str_adrs"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:nextFocusForward="@+id/ti_area"
                             android:singleLine="true" />
@@ -249,6 +254,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/str_area"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:nextFocusForward="@+id/ti_country"
                             android:singleLine="true" />
@@ -274,6 +280,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/str_city"
                                 android:imeOptions="actionNext"
+                                android:inputType="text"
                                 android:maxLines="1"
                                 android:nextFocusForward="@+id/ti_conf_pass"
                                 android:singleLine="true" />
@@ -294,6 +301,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/str_state"
                                 android:imeOptions="actionNext"
+                                android:inputType="text"
                                 android:maxLines="1"
                                 android:nextFocusForward="@+id/ti_conf_pass"
                                 android:singleLine="true" />
@@ -320,6 +328,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/str_country"
                                 android:imeOptions="actionNext"
+                                android:inputType="text"
                                 android:maxLines="1"
                                 android:nextFocusForward="@+id/ti_pin"
                                 android:singleLine="true" />
@@ -340,6 +349,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/str_pinc"
                                 android:imeOptions="actionNext"
+                                android:inputType="text"
                                 android:maxLines="1"
                                 android:nextFocusForward="@+id/ti_pfl_no"
                                 android:singleLine="true" />
@@ -399,6 +409,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/str_f_no"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:nextFocusForward="@+id/ti_pso_aprt"
                             android:singleLine="true" />
@@ -417,6 +428,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/str_apart"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:nextFocusForward="@+id/ti_padrs"
                             android:singleLine="true" />
@@ -435,6 +447,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/str_adrs"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:nextFocusForward="@+id/ti_parea"
                             android:singleLine="true" />
@@ -453,6 +466,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/str_area"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLines="1"
                             android:nextFocusForward="@+id/ti_pcountry"
                             android:singleLine="true" />
@@ -478,6 +492,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/str_city"
                                 android:imeOptions="actionNext"
+                                android:inputType="text"
                                 android:maxLines="1"
                                 android:nextFocusForward="@+id/ti_pconf_pass"
                                 android:singleLine="true" />
@@ -498,6 +513,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/str_state"
                                 android:imeOptions="actionNext"
+                                android:inputType="text"
                                 android:maxLines="1"
                                 android:nextFocusForward="@+id/ti_pconf_pass"
                                 android:singleLine="true" />
@@ -524,6 +540,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/str_country"
                                 android:imeOptions="actionNext"
+                                android:inputType="text"
                                 android:maxLines="1"
                                 android:nextFocusForward="@+id/ti_ppin"
                                 android:singleLine="true" />
@@ -543,9 +560,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/str_pinc"
-                                android:imeOptions="actionNext"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
                                 android:maxLines="1"
-                                android:nextFocusForward="@+id/ti_pconf_pass"
                                 android:singleLine="true" />
                         </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
