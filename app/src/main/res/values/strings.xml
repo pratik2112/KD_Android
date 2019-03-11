@@ -85,6 +85,18 @@
 
     <string name="str_dob">Date of Birth</string>
     <string name="str_dmy">DD-MM-YYYY</string>
+    <string name="str_c_adrs">Current Address Detail</string>
+    <string name="str_pa_adrs">Permanent Address Detail</string>
+    <string name="str_f_no">Flate No.</string>
+    <string name="str_apart">Society\\Apartment</string>
+    <string name="str_adrs">Address</string>
+    <string name="str_area">Area</string>
+    <string name="str_city">City</string>
+    <string name="str_dist">District</string>
+    <string name="str_state">State</string>
+    <string name="str_country">Country</string>
+    <string name="str_pinc">Pincode</string>
+    <string name="str_c_p">Is Permanent Address is same as Current Address ?</string>
     <string name="str_p_adrs">Primary Address</string>
     <string name="str_s_adrs">Secondary Address</string>
 

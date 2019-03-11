@@ -8,142 +8,549 @@
 
     <include layout="@layout/header_lay" />
 
-    <android.support.v7.widget.CardView
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nv_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/tv_10"
-        android:layout_marginTop="@dimen/tv_10"
-        android:layout_marginRight="@dimen/tv_10"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/tv_5"
-        app:cardElevation="0dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/tv_10"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ti_fname"
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/edt_fname"
-                    style="@style/lblRegular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/str_fname"
-                    android:imeOptions="actionNext"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:nextFocusForward="@+id/ti_new_pass"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ti_lname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/edt_lname"
-                    style="@style/lblRegular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/str_lname"
-                    android:imeOptions="actionNext"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:nextFocusForward="@+id/ti_conf_pass"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/tv_10"
-        android:layout_marginTop="@dimen/tv_10"
-        android:layout_marginRight="@dimen/tv_10"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/tv_5"
-        app:cardElevation="0dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/tv_10"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/lblRegular"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="left|center_vertical"
-                android:text="@string/str_gender"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/sp_14"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/iv_male"
-                android:layout_width="40dip"
-                android:layout_height="40dip"
-                android:padding="@dimen/tv_8"
-                android:src="@drawable/ic_g_male" />
-
-            <ImageView
-                android:id="@+id/iv_female"
-                android:layout_width="40dip"
-                android:layout_height="40dip"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/tv_10"
-                android:padding="@dimen/tv_8"
-                android:src="@drawable/ic_g_female" />
+                android:layout_marginTop="@dimen/tv_10"
+                android:layout_marginRight="@dimen/tv_10"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/tv_5"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/tv_10"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_fname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edt_fname"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_fname"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_lname"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_lname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edt_lname"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_lname"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_fl_no"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tv_10"
+                android:layout_marginTop="@dimen/tv_10"
+                android:layout_marginRight="@dimen/tv_10"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/tv_5"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/tv_10"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/lblRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/str_gender"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_male"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:padding="@dimen/tv_8"
+                        android:src="@drawable/ic_g_male" />
+
+                    <ImageView
+                        android:id="@+id/iv_female"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_marginLeft="@dimen/tv_10"
+                        android:padding="@dimen/tv_8"
+                        android:src="@drawable/ic_g_female" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tv_10"
+                android:layout_marginTop="@dimen/tv_10"
+                android:layout_marginRight="@dimen/tv_10"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/tv_5"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:layout_margin="@dimen/tv_10"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/lblRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/str_dob"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/sp_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_dob"
+                        style="@style/lblRegular"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/str_dmy"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tv_10"
+                android:layout_marginTop="@dimen/tv_10"
+                android:layout_marginRight="@dimen/tv_10"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/tv_5"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/tv_10"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/lblRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/str_c_adrs"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_fl_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_8">
+
+                        <EditText
+                            android:id="@+id/edt_fl_no"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_f_no"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_so_aprt"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_so_aprt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_8">
+
+                        <EditText
+                            android:id="@+id/edt_so_aprt"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_apart"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_adrs"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_adrs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_8">
+
+                        <EditText
+                            android:id="@+id/edt_adrs"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_adrs"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_area"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_8">
+
+                        <EditText
+                            android:id="@+id/edt_area"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_area"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_country"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/ti_city"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_8"
+                            android:layout_marginRight="@dimen/tv_5"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/edt_city"
+                                style="@style/lblRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/str_city"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/ti_conf_pass"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/ti_state"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/tv_5"
+                            android:layout_marginTop="@dimen/tv_8"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/edt_state"
+                                style="@style/lblRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/str_state"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/ti_conf_pass"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/ti_country"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_8"
+                            android:layout_marginRight="@dimen/tv_5"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/edt_country"
+                                style="@style/lblRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/str_country"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/ti_pin"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/ti_pin"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/tv_5"
+                            android:layout_marginTop="@dimen/tv_8"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/edt_pin"
+                                style="@style/lblRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/str_pinc"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/ti_pfl_no"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tv_10"
+                android:layout_marginTop="@dimen/tv_10"
+                android:layout_marginRight="@dimen/tv_10"
+                android:layout_marginBottom="@dimen/tv_15"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/tv_5"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/tv_10"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/lblRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/str_pa_adrs"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/cb_same"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:checked="false"
+                        android:text="@string/str_c_p"
+                        android:textColor="@color/colorAccent"
+                        android:theme="@style/lblRegular" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_pfl_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_8">
+
+                        <EditText
+                            android:id="@+id/edt_pfl_no"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_f_no"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_pso_aprt"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_pso_aprt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_8">
+
+                        <EditText
+                            android:id="@+id/edt_pso_aprt"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_apart"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_padrs"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_padrs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_8">
+
+                        <EditText
+                            android:id="@+id/edt_padrs"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_adrs"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_parea"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_parea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/tv_8">
+
+                        <EditText
+                            android:id="@+id/edt_parea"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_area"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_pcountry"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/ti_pcity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_8"
+                            android:layout_marginRight="@dimen/tv_5"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/edt_pcity"
+                                style="@style/lblRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/str_city"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/ti_pconf_pass"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/ti_pstate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/tv_5"
+                            android:layout_marginTop="@dimen/tv_8"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/edt_pstate"
+                                style="@style/lblRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/str_state"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/ti_pconf_pass"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/ti_pcountry"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tv_8"
+                            android:layout_marginRight="@dimen/tv_5"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/edt_pcountry"
+                                style="@style/lblRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/str_country"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/ti_ppin"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/ti_ppin"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/tv_5"
+                            android:layout_marginTop="@dimen/tv_8"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/edt_ppin"
+                                style="@style/lblRegular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/str_pinc"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/ti_pconf_pass"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
         </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/tv_10"
-        android:layout_marginTop="@dimen/tv_10"
-        android:layout_marginRight="@dimen/tv_10"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/tv_5"
-        app:cardElevation="0dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dip"
-            android:layout_margin="@dimen/tv_10"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/lblRegular"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="left|center_vertical"
-                android:text="@string/str_dob"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/sp_14"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_dob"
-                style="@style/lblRegular"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/str_dmy"
-                android:textSize="@dimen/sp_14" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

@@ -3,6 +3,7 @@ package kdgs.kdgroup.activity;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
@@ -30,6 +31,7 @@ import butterknife.BindView;
 import kdgs.kdgroup.R;
 import kdgs.kdgroup.base.BaseActivity;
 import kdgs.kdgroup.config.CommonFunctions;
+import kdgs.kdgroup.config.Constants;
 import kdgs.kdgroup.fragment.DashboardFragment;
 
 public class DashboardActivity extends BaseActivity implements OnNavigationItemSelectedListener {
@@ -101,7 +103,7 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
         FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
         switch (id) {
             case R.id.nav_dashboard:
-                if(toolbar != null)
+                if (toolbar != null)
                     toolbar.setTitle(getString(R.string.str_m_dashboard));
 
                 DashboardFragment dashboardFragment = new DashboardFragment();
@@ -119,11 +121,17 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
                 startActivity(new Intent(this, ProfileActivity.class));
                 break;
             case R.id.nav_comp:
-                if(toolbar != null)
+                if (toolbar != null)
                     toolbar.setTitle(getString(R.string.str_m_comp));
                 break;
             case R.id.nav_contact:
-                callPermissionListeners();
+                if (CommonFunctions.getPreference(DashboardActivity.this, Constants.callPermission, false)){
+                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                    intent.setData(Uri.parse("tel:9999999999"));
+                    startActivity(intent);
+                } else {
+                    callPermissionListeners();
+                }
                 break;
             case R.id.nav_logout:
                 startActivity(new Intent(this, SigninActivity.class));
@@ -169,10 +177,15 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
                     .withListener(new PermissionListener() {
                         @Override
                         public void onPermissionGranted(PermissionGrantedResponse response) {
+                            CommonFunctions.setPreference(DashboardActivity.this, Constants.callPermission, true);
+                            Intent intent = new Intent(Intent.ACTION_DIAL);
+                            intent.setData(Uri.parse("tel:9999999999"));
+                            startActivity(intent);
                         }
 
                         @Override
                         public void onPermissionDenied(PermissionDeniedResponse response) {
+                            CommonFunctions.setPreference(DashboardActivity.this, Constants.callPermission, false);
                             storagePermissionDialog();
                         }
 
