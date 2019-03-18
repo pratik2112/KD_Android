@@ -2,16 +2,38 @@ package kdgs.kdgroup.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.google.gson.Gson;
 
+import org.json.JSONObject;
+
+import butterknife.BindView;
 import butterknife.OnClick;
 import kdgs.kdgroup.R;
 import kdgs.kdgroup.base.BaseActivity;
 import kdgs.kdgroup.config.CommonFunctions;
 import kdgs.kdgroup.config.Constants;
+import kdgs.kdgroup.config.KDGConfig;
+import kdgs.kdgroup.config.WebService;
+import kdgs.kdgroup.model.LoginResponse;
 
 public class SigninActivity extends BaseActivity {
+
+    @BindView(R.id.ti_uname)
+    TextInputLayout ti_uname;
+    @BindView(R.id.edt_uname)
+    EditText edt_uname;
+    @BindView(R.id.ti_pass)
+    TextInputLayout ti_pass;
+    @BindView(R.id.edt_pass)
+    EditText edt_pass;
+    @BindView(R.id.btn_signin)
+    Button btn_signin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,18 +58,53 @@ public class SigninActivity extends BaseActivity {
     @OnClick(R.id.btn_signin)
     public void signinClick() {
         try {
-            /*if (output.getString(verified).equalsIgnoreCase(yes)) {
-                Gson gson = new Gson();
-                LogingResponce logingResponce = gson.fromJson(output.toString(), LogingResponce.class);
-                CommonFunctions.setPreference(SigninActivity.this, Constants.isLogin, true);
-                CommonFunctions.setPreference(getApplicationContext(), Constants.userdata, gson.toJson(logingResponce));
-                CommonFunctions.changeactivity(SigninActivity.this, DashboardActivity.class);
-            } else {
-                startActivity(new Intent(SigninActivity.this, SigninActivity.class));
-                finish();
+            /*{
+                "u_name":"jatinvaghasiya248",
+                "u_password":"jatin248",
+                "device_token":"rfgdfhy",
+                "device_type":"jfghfghhm",
+                "device_id":"151121dfhgdf"
             }*/
-            startActivity(new Intent(SigninActivity.this, DashboardActivity.class));
-            finish();
+            if (edt_uname.getText().toString().trim().length() == 0) {
+                CommonFunctions.showSnack(this, getString(R.string.str_rgstr3));
+            } else if (edt_pass.getText().toString().trim().length() == 0) {
+                CommonFunctions.showSnack(this, getString(R.string.str_rgstr4));
+            } else {
+                JSONObject inputdata = new JSONObject();
+                inputdata.put(Constants.u_name, edt_uname.getText().toString().trim());
+                inputdata.put(Constants.u_password, edt_pass.getText().toString().trim());
+                inputdata.put(Constants.device_token, "");
+                inputdata.put(Constants.device_type, Constants.Android);
+                inputdata.put(Constants.device_id, CommonFunctions.getPreference(this, Constants.device_token, ""));
+                WebService webService = new WebService(KDGConfig.WEBURL + KDGConfig.APIURL + KDGConfig.loginURL, inputdata, true, this);
+                webService.getData(Request.Method.POST, new WebService.OnResult() {
+                    @Override
+                    public void OnSuccess(JSONObject result) {
+                        try {
+                            if (result.getBoolean(Constants.status)) {
+                                Gson gson = new Gson();
+                                LoginResponse loginResponse = gson.fromJson(result.toString(), LoginResponse.class);
+                                //if (loginResponse.result) {
+                                    CommonFunctions.setPreference(SigninActivity.this, Constants.isLogin, true);
+                                    CommonFunctions.setPreference(getApplicationContext(), Constants.userdata, gson.toJson(loginResponse));
+                                    CommonFunctions.changeactivity(SigninActivity.this, DashboardActivity.class);
+                                /*} else {
+                                    CommonFunctions.showSnack(SigninActivity.this, loginResponse.message);
+                                }*/
+                            } else {
+                                Toast.makeText(SigninActivity.this, getString(R.string.invalid_usr_pwd), Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void OnFail(String error) {
+                        Toast.makeText(SigninActivity.this, error, Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

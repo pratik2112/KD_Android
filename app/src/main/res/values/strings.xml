@@ -112,7 +112,11 @@
 
     <string name="str_rgstr1">Please enter email address</string>
     <string name="str_rgstr2">Not a valid email address!</string>
+    <string name="str_rgstr3">Not a valid username or email address!</string>
+    <string name="str_rgstr4">Not a valid password!</string>
+    <string name="str_rgstr5">Password doe\'s not match!</string>
     <string name="invalid_otp">"Invalid OTP!!!"</string>
+    <string name="invalid_usr_pwd">"Invalid Username Detail!!!"</string>
 
     <string name="subject">Just Try KD Group App at:</string>
     <string name="google_url">https://play.google.com/store/apps/details?id=</string>

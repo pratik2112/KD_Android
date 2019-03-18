@@ -201,7 +201,6 @@ public class SignupActivity extends BaseActivity {
                 "u_firstname":"jatin",
                 "u_lastname":"vaghasiya",
                 "u_mobile":"9979542873",
-                "device_token":"rfgdfhy",
                 "device_type":"jfghfghhm",
                 "device_id":"151121dfhgdf"
             }*/

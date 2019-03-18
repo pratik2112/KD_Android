@@ -2,7 +2,7 @@ package kdgs.kdgroup.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public abstract class LoginResponse {
+public class LoginResponse {
 
     @SerializedName("result")
     public Result result;
@@ -38,6 +38,8 @@ public abstract class LoginResponse {
         public String uMobile;
         @SerializedName("u_image")
         public String uImage;
+        @SerializedName("u_dob")
+        public String uDob;
         @SerializedName("u_gander")
         public String uGander;
         @SerializedName("u_lastname")
