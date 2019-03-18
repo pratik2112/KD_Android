@@ -43,6 +43,7 @@
     <string name="str_dont">Not a member yet ?</string>
     <string name="str_return">Return to</string>
 
+    <string name="str_name">Full Name</string>
     <string name="str_fname">First Name</string>
     <string name="str_lname">Last Name</string>
     <string name="str_uname">Username</string>
@@ -87,6 +88,8 @@
     <string name="str_p_info">Personal Information</string>
     <string name="str_c_info">Complaint Information</string>
     <string name="str_comp_cat">Complaint Category</string>
+    <string name="str_category">Category</string>
+    <string name="str_comp_barcode">Scan Product Code</string>
     <string name="str_comp_desc">Descirbe Complaint</string>
 
     <string name="str_dob">Date of Birth</string>
@@ -105,6 +108,11 @@
     <string name="str_c_p">Is Permanent Address is same as Current Address ?</string>
     <string name="str_p_adrs">Primary Address</string>
     <string name="str_s_adrs">Secondary Address</string>
+
+
+    <string name="str_rgstr1">Please enter email address</string>
+    <string name="str_rgstr2">Not a valid email address!</string>
+    <string name="invalid_otp">"Invalid OTP!!!"</string>
 
     <string name="subject">Just Try KD Group App at:</string>
     <string name="google_url">https://play.google.com/store/apps/details?id=</string>

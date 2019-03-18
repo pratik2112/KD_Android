@@ -3,10 +3,13 @@ package kdgs.kdgroup.activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.gson.Gson;
+
 import butterknife.OnClick;
 import kdgs.kdgroup.R;
 import kdgs.kdgroup.base.BaseActivity;
 import kdgs.kdgroup.config.CommonFunctions;
+import kdgs.kdgroup.config.Constants;
 
 public class SigninActivity extends BaseActivity {
 
@@ -25,8 +28,6 @@ public class SigninActivity extends BaseActivity {
         try {
             getSupportActionBar().hide();
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            if (CommonFunctions.checkConnection(this)) {
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -34,8 +35,22 @@ public class SigninActivity extends BaseActivity {
 
     @OnClick(R.id.btn_signin)
     public void signinClick() {
-        startActivity(new Intent(SigninActivity.this, DashboardActivity.class));
-        finish();
+        try {
+            /*if (output.getString(verified).equalsIgnoreCase(yes)) {
+                Gson gson = new Gson();
+                LogingResponce logingResponce = gson.fromJson(output.toString(), LogingResponce.class);
+                CommonFunctions.setPreference(SigninActivity.this, Constants.isLogin, true);
+                CommonFunctions.setPreference(getApplicationContext(), Constants.userdata, gson.toJson(logingResponce));
+                CommonFunctions.changeactivity(SigninActivity.this, DashboardActivity.class);
+            } else {
+                startActivity(new Intent(SigninActivity.this, SigninActivity.class));
+                finish();
+            }*/
+            startActivity(new Intent(SigninActivity.this, DashboardActivity.class));
+            finish();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @OnClick(R.id.tv_signup)

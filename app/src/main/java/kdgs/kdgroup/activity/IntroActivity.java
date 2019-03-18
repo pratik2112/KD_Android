@@ -27,8 +27,6 @@ public class IntroActivity extends BaseActivity {
 
     private void inticompnets() {
         try {
-            if (CommonFunctions.checkConnection(this)) {
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }

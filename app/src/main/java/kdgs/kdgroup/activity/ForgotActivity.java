@@ -35,8 +35,6 @@ public class ForgotActivity extends BaseActivity {
         try {
             getSupportActionBar().hide();
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            if (CommonFunctions.checkConnection(this)) {
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }

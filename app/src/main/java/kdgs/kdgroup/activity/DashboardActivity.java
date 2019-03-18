@@ -64,8 +64,6 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
 
     private void inticompnets() {
         try {
-            if (CommonFunctions.checkConnection(this)) {
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -122,6 +120,9 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
                 break;
             case R.id.nav_comp:
                 startActivity(new Intent(this, ComplaintActivity.class));
+                break;
+            case R.id.nav_feedback:
+                startActivity(new Intent(this, FeedbackActivity.class));
                 break;
             case R.id.nav_contact:
                 if (CommonFunctions.getPreference(DashboardActivity.this, Constants.callPermission, false)) {

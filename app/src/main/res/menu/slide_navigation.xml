@@ -18,6 +18,10 @@
             android:icon="@drawable/complaint"
             android:title="@string/str_m_comp" />
         <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_write"
+            android:title="@string/str_m_feedback" />
+        <item
             android:id="@+id/nav_contact"
             android:icon="@drawable/call"
             android:title="@string/str_m_contact" />
