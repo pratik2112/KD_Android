@@ -44,7 +44,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:text="KD Group"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/sp_18"
                     android:textStyle="bold" />
@@ -56,7 +55,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/tv_5"
                     android:maxLines="1"
-                    android:text="Username"
                     android:textColor="@color/white_80"
                     android:textSize="@dimen/sp_13" />
             </LinearLayout>
@@ -72,7 +70,6 @@
             android:drawablePadding="@dimen/tv_10"
             android:gravity="center_vertical"
             android:maxLines="1"
-            android:text="(981)-000-1234"
             android:textColor="@color/white_80"
             android:textSize="@dimen/sp_14" />
 
@@ -86,7 +83,6 @@
             android:drawablePadding="@dimen/tv_10"
             android:gravity="center_vertical"
             android:maxLines="1"
-            android:text="kdgroup@gmail.com"
             android:textColor="@color/white_80"
             android:textSize="@dimen/sp_14" />
     </LinearLayout>

@@ -4,14 +4,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginResponse {
 
-    @SerializedName("result")
-    public Result result;
+    @SerializedName("data")
+    public Data data;
     @SerializedName("message")
     public String message;
     @SerializedName("status")
     public boolean status;
 
-    public static class Result {
+    public static class Data {
         @SerializedName("u_modified")
         public String uModified;
         @SerializedName("u_created")

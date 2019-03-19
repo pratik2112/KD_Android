@@ -9,4 +9,5 @@ public class KDGConfig {
     public static String otpURL = "generateotp";
     public static String registerURL = "userRegister";
     public static String loginURL = "login";
+    public static String updateUserURL = "profileUpdate";
 }

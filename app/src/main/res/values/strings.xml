@@ -109,7 +109,7 @@
     <string name="str_p_adrs">Primary Address</string>
     <string name="str_s_adrs">Secondary Address</string>
 
-
+    <string name="txt_guest">Guest</string>
     <string name="str_rgstr1">Please enter email address</string>
     <string name="str_rgstr2">Not a valid email address!</string>
     <string name="str_rgstr3">Please enter username or email address</string>

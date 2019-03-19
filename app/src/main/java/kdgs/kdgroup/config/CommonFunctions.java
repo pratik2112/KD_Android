@@ -24,6 +24,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 import com.nispok.snackbar.Snackbar;
 
 import org.json.JSONObject;
@@ -38,6 +39,7 @@ import java.util.Date;
 import java.util.regex.Pattern;
 
 import kdgs.kdgroup.R;
+import kdgs.kdgroup.model.LoginResponse;
 import kdgs.kdgroup.reciver.ConnectivityReceiver;
 import kdgs.kdgroup.utills.Exiter;
 
@@ -764,6 +766,23 @@ public class CommonFunctions {
                 .fitCenter()
                 .placeholder((int) R.drawable.ic_trans)
                 .error((int) R.drawable.ic_trans)
+                .into(imageView);
+    }
+
+    public static LoginResponse getloginresponse(Context context) {
+        LoginResponse loginResponse = null;
+        loginResponse = new Gson().fromJson(CommonFunctions.getPreference(context, Constants.userdata, "").toString(), LoginResponse.class);
+        return loginResponse;
+    }
+
+    public static void setImageURL(Context activity, ImageView imageView, String url) {
+        Glide.with(activity)
+                .load(url)
+                .thumbnail(0.5f)
+                .dontAnimate()
+                .fitCenter()
+                .placeholder((int) R.drawable.unknown)
+                .error((int) R.drawable.unknown)
                 .into(imageView);
     }
 }

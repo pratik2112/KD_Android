@@ -15,8 +15,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
@@ -28,6 +31,7 @@ import com.karumi.dexter.listener.PermissionRequestErrorListener;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 import butterknife.BindView;
+import butterknife.Optional;
 import kdgs.kdgroup.R;
 import kdgs.kdgroup.base.BaseActivity;
 import kdgs.kdgroup.config.CommonFunctions;
@@ -43,6 +47,8 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
     @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
     private PermissionRequestErrorListener errorListener;
+
+    public TextView tv_name, tv_uname, tv_phone, tv_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,8 +70,39 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
 
     private void inticompnets() {
         try {
+            tv_name = (TextView) navigationView.getHeaderView(0).findViewById(R.id.tv_name);
+            tv_uname = (TextView) navigationView.getHeaderView(0).findViewById(R.id.tv_uname);
+            tv_phone = (TextView) navigationView.getHeaderView(0).findViewById(R.id.tv_phone);
+            tv_email = (TextView) navigationView.getHeaderView(0).findViewById(R.id.tv_email);
+
+            if (CommonFunctions.getPreference(DashboardActivity.this, Constants.isLogin, false)) {
+                tv_name.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uFirstname + " " + CommonFunctions.getloginresponse(this).data.uLastname));
+                tv_uname.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uName));
+                tv_phone.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uMobile));
+                tv_email.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uEmail));
+            } else {
+                tv_name.setText("");
+                tv_uname.setText("");
+                tv_phone.setText("");
+                tv_email.setText("");
+            }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+
+        Bundle b = intent.getExtras();
+        if (b.getBoolean(Constants.userdata)) {
+            if (CommonFunctions.getPreference(DashboardActivity.this, Constants.isLogin, false)) {
+                tv_name.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uFirstname + " " + CommonFunctions.getloginresponse(this).data.uLastname));
+                tv_uname.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uName));
+                tv_phone.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uMobile));
+                tv_email.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uEmail));
+            }
         }
     }
 
@@ -134,6 +171,8 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
                 }
                 break;
             case R.id.nav_logout:
+                CommonFunctions.setPreference(DashboardActivity.this, Constants.isLogin, false);
+                CommonFunctions.setPreference(DashboardActivity.this, Constants.userdata, "");
                 startActivity(new Intent(this, SigninActivity.class));
                 this.finish();
                 break;
