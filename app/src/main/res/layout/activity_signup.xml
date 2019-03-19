@@ -37,314 +37,324 @@
             android:textSize="@dimen/sp_14" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_signup"
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nv_signup"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.77"
-        android:background="@drawable/intro_bg"
-        android:orientation="vertical"
-        android:padding="@dimen/tv_22">
+        android:background="@drawable/intro_bg">
 
-        <TextView
-            android:id="@+id/tv_step1"
-            style="@style/lblRegular"
+        <LinearLayout
+            android:id="@+id/ll_signup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/step_bg"
-            android:padding="@dimen/tv_10"
-            android:text="@string/str_step1"
-            android:textSize="@dimen/sp_16" />
-
-        <RelativeLayout
-            android:id="@+id/rl_step1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tv_5"
-            tools:ignore="UselessParent">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/tv_22">
 
             <TextView
-                android:id="@+id/tv_select_email"
+                android:id="@+id/tv_step1"
                 style="@style/lblRegular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/email_bg"
-                android:paddingLeft="@dimen/tv_5"
-                android:paddingTop="@dimen/tv_3"
-                android:paddingRight="@dimen/tv_5"
-                android:paddingBottom="@dimen/tv_3"
-                android:text="@string/str_select_email"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_12" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ti_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_select_email">
+                android:background="@drawable/step_bg"
+                android:padding="@dimen/tv_10"
+                android:text="@string/str_step1"
+                android:textSize="@dimen/sp_16" />
 
-                <EditText
-                    android:id="@+id/edt_email"
-                    style="@style/lblRegular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/str_email"
-                    android:imeOptions="actionNext"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:nextFocusForward="@+id/ti_mobile"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ti_mobile"
+            <RelativeLayout
+                android:id="@+id/rl_step1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_email">
-
-                <EditText
-                    android:id="@+id/edt_mobile"
-                    style="@style/lblRegular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/str_mobile"
-                    android:imeOptions="actionDone"
-                    android:inputType="number"
-                    android:maxLength="10"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_mobile"
                 android:layout_marginTop="@dimen/tv_5"
-                android:gravity="center"
-                android:padding="@dimen/tv_5">
+                tools:ignore="UselessParent">
 
-                <Button
-                    android:id="@+id/btn_otp_submit"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dip"
-                    android:background="@drawable/btn_signup_bg"
-                    android:text="@string/str_submit"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp_15" />
-            </LinearLayout>
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/tv_step2"
-            style="@style/lblRegular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tv_5"
-            android:background="@drawable/step_bg"
-            android:padding="@dimen/tv_10"
-            android:text="@string/str_step2"
-            android:textSize="@dimen/sp_16" />
-
-        <RelativeLayout
-            android:id="@+id/rl_step2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tv_5"
-            android:visibility="gone"
-            tools:ignore="UselessParent">
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ti_verify"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/edt_verify"
+                <TextView
+                    android:id="@+id/tv_select_email"
                     style="@style/lblRegular"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="@string/str_enter_otp"
-                    android:inputType="number"
-                    android:imeOptions="actionDone"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_verify"
-                android:layout_marginTop="@dimen/tv_10"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="@dimen/tv_5">
-
-                <Button
-                    android:id="@+id/btn_resend"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dip"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_signup_bg"
-                    android:text="@string/str_resend"
-                    android:textAllCaps="false"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/email_bg"
+                    android:paddingLeft="@dimen/tv_5"
+                    android:paddingTop="@dimen/tv_3"
+                    android:paddingRight="@dimen/tv_5"
+                    android:paddingBottom="@dimen/tv_3"
+                    android:text="@string/str_select_email"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/sp_15" />
-
-                <Button
-                    android:id="@+id/btn_verify"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dip"
-                    android:layout_marginLeft="@dimen/tv_10"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_signup_bg"
-                    android:text="@string/str_verify"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp_15" />
-            </LinearLayout>
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/tv_step3"
-            style="@style/lblRegular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tv_5"
-            android:background="@drawable/step_bg"
-            android:padding="@dimen/tv_10"
-            android:text="@string/str_step3"
-            android:textSize="@dimen/sp_16" />
-
-        <RelativeLayout
-            android:id="@+id/rl_step3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tv_5"
-            android:visibility="gone"
-            tools:ignore="UselessParent">
-
-            <LinearLayout
-                android:id="@+id/ll_full_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    android:textSize="@dimen/sp_12" />
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/ti_fname"
-                    android:layout_width="0dp"
+                    android:id="@+id/ti_email"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/tv_5"
-                    android:layout_weight="0.5">
+                    android:layout_below="@+id/tv_select_email">
 
                     <EditText
-                        android:id="@+id/edt_fname"
+                        android:id="@+id/edt_email"
                         style="@style/lblRegular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/str_fname"
+                        android:hint="@string/str_email"
                         android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
                         android:maxLines="1"
-                        android:nextFocusForward="@+id/ti_lname"
+                        android:nextFocusForward="@+id/ti_mobile"
                         android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/ti_lname"
-                    android:layout_width="0dp"
+                    android:id="@+id/ti_mobile"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/tv_5"
-                    android:layout_weight="0.5">
+                    android:layout_below="@+id/ti_email">
 
                     <EditText
-                        android:id="@+id/edt_lname"
+                        android:id="@+id/edt_mobile"
                         style="@style/lblRegular"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/str_lname"
-                        android:imeOptions="actionNext"
+                        android:hint="@string/str_mobile"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="10"
                         android:maxLines="1"
-                        android:nextFocusForward="@+id/ti_uname"
                         android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ti_uname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ll_full_name">
-
-                <EditText
-                    android:id="@+id/edt_uname"
-                    style="@style/lblRegular"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/str_uname"
-                    android:imeOptions="actionNext"
-                    android:maxLines="1"
-                    android:nextFocusForward="@+id/ti_email"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_below="@+id/ti_mobile"
+                    android:layout_marginTop="@dimen/tv_5"
+                    android:gravity="center"
+                    android:padding="@dimen/tv_5">
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ti_pass"
+                    <Button
+                        android:id="@+id/btn_otp_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:background="@drawable/btn_signup_bg"
+                        android:text="@string/str_submit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_step2"
+                style="@style/lblRegular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_uname">
-
-                <EditText
-                    android:id="@+id/edt_pass"
-                    style="@style/lblRegular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/str_pwd"
-                    android:imeOptions="actionNext"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:nextFocusForward="@+id/ti_conf_pass"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/ti_conf_pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_pass">
-
-                <EditText
-                    android:id="@+id/edt_con_pass"
-                    style="@style/lblRegular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/str_conf_pwd"
-                    android:imeOptions="actionDone"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_conf_pass"
                 android:layout_marginTop="@dimen/tv_5"
-                android:gravity="center"
-                android:padding="@dimen/tv_5">
+                android:background="@drawable/step_bg"
+                android:padding="@dimen/tv_10"
+                android:text="@string/str_step2"
+                android:textSize="@dimen/sp_16" />
 
-                <Button
-                    android:id="@+id/btn_submit"
+            <RelativeLayout
+                android:id="@+id/rl_step2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_5"
+                android:visibility="gone"
+                tools:ignore="UselessParent">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/ti_verify"
                     android:layout_width="match_parent"
-                    android:layout_height="40dip"
-                    android:background="@drawable/btn_signup_bg"
-                    android:text="@string/str_submit"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp_15" />
-            </LinearLayout>
-        </RelativeLayout>
-    </LinearLayout>
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edt_verify"
+                        style="@style/lblRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_enter_otp"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ti_verify"
+                    android:layout_marginTop="@dimen/tv_10"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/tv_5">
+
+                    <Button
+                        android:id="@+id/btn_resend"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_signup_bg"
+                        android:text="@string/str_resend"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15" />
+
+                    <Button
+                        android:id="@+id/btn_verify"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginLeft="@dimen/tv_10"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_signup_bg"
+                        android:text="@string/str_verify"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_step3"
+                style="@style/lblRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_5"
+                android:background="@drawable/step_bg"
+                android:padding="@dimen/tv_10"
+                android:text="@string/str_step3"
+                android:textSize="@dimen/sp_16" />
+
+            <RelativeLayout
+                android:id="@+id/rl_step3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_5"
+                android:visibility="gone"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:id="@+id/ll_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_fname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/tv_5"
+                        android:layout_weight="0.5">
+
+                        <EditText
+                            android:id="@+id/edt_fname"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_fname"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_lname"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_lname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/tv_5"
+                        android:layout_weight="0.5">
+
+                        <EditText
+                            android:id="@+id/edt_lname"
+                            style="@style/lblRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/str_lname"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:nextFocusForward="@+id/ti_uname"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/ti_uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_full_name">
+
+                    <EditText
+                        android:id="@+id/edt_uname"
+                        style="@style/lblRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_uname"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/ti_email"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/ti_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ti_uname"
+                    app:passwordToggleDrawable="@drawable/show_password_selector"
+                    app:passwordToggleEnabled="true">
+
+                    <EditText
+                        android:id="@+id/edt_pass"
+                        style="@style/lblRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_pwd"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:nextFocusForward="@+id/ti_conf_pass"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/ti_conf_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ti_pass"
+                    app:passwordToggleDrawable="@drawable/show_password_selector"
+                    app:passwordToggleEnabled="true">
+
+                    <EditText
+                        android:id="@+id/edt_con_pass"
+                        style="@style/lblRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/str_conf_pwd"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ti_conf_pass"
+                    android:layout_marginTop="@dimen/tv_5"
+                    android:gravity="center"
+                    android:padding="@dimen/tv_5">
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:background="@drawable/btn_signup_bg"
+                        android:text="@string/str_submit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
     <LinearLayout
         android:id="@+id/ll_email_confirm"

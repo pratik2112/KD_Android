@@ -3,6 +3,7 @@ package kdgs.kdgroup.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.widget.NestedScrollView;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
@@ -55,6 +56,7 @@ public class SignupActivity extends BaseActivity {
     TextInputLayout ti_verify;
     @BindView(R.id.edt_verify)
     EditText edt_verify;
+
     @BindView(R.id.ti_fname)
     TextInputLayout ti_fname;
     @BindView(R.id.edt_fname)
@@ -78,8 +80,8 @@ public class SignupActivity extends BaseActivity {
 
     @BindView(R.id.ll_email_confirm)
     LinearLayout ll_email_confirm;
-    @BindView(R.id.ll_signup)
-    LinearLayout ll_signup;
+    @BindView(R.id.nv_signup)
+    NestedScrollView nv_signup;
     String otpValue;
 
     @Override
@@ -108,8 +110,10 @@ public class SignupActivity extends BaseActivity {
             String username = edt_email.getText().toString().trim();
             if (edt_email.getText().toString().length() == 0) {
                 Toast.makeText(this, R.string.str_rgstr1, Toast.LENGTH_SHORT).show();
+                edt_email.requestFocus();
             } else if (!validateEmailAddress(username)) {
                 ti_email.setError(getString(R.string.str_rgstr2));
+                edt_email.requestFocus();
             } else {
                 rl_step1.setVisibility(View.GONE);
                 rl_step2.setVisibility(View.VISIBLE);
@@ -183,10 +187,26 @@ public class SignupActivity extends BaseActivity {
     @OnClick(R.id.btn_submit)
     public void submitClick() {
         try {
-            ll_signup.setVisibility(View.GONE);
-            ll_email_confirm.setVisibility(View.VISIBLE);
-            tv_note.setText(Html.fromHtml(getString(R.string.str_note, edt_email.getText().toString())));
-            registerUser();
+            if (edt_fname.getText().toString().length() == 0) {
+                Toast.makeText(this, R.string.str_rgstr7, Toast.LENGTH_SHORT).show();
+                edt_fname.requestFocus();
+            } else if (edt_lname.getText().toString().length() == 0) {
+                Toast.makeText(this, R.string.str_rgstr8, Toast.LENGTH_SHORT).show();
+                edt_lname.requestFocus();
+            } else if (edt_uname.getText().toString().length() == 0) {
+                Toast.makeText(this, R.string.str_rgstr9, Toast.LENGTH_SHORT).show();
+                edt_uname.requestFocus();
+            } else if (edt_pass.getText().toString().length() == 0) {
+                Toast.makeText(this, R.string.str_rgstr4, Toast.LENGTH_SHORT).show();
+                edt_pass.requestFocus();
+            } else if (edt_con_pass.getText().toString().length() == 0) {
+                Toast.makeText(this, R.string.str_rgstr5, Toast.LENGTH_SHORT).show();
+                edt_con_pass.requestFocus();
+            } else if (!(edt_pass.getText().toString()).equals(edt_con_pass.getText().toString())) {
+                Toast.makeText(this, R.string.str_rgstr6, Toast.LENGTH_SHORT).show();
+            } else {
+                registerUser();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -233,6 +253,13 @@ public class SignupActivity extends BaseActivity {
                             CommonFunctions.setPreference(SignupActivity.this, Constants.isLogin, true);
                             CommonFunctions.setPreference(getApplicationContext(), Constants.userdata, gson.toJson(loginResponse));
                             CommonFunctions.changeactivity(SignupActivity.this, SigninActivity.class);
+
+                            nv_signup.setVisibility(View.GONE);
+                            ll_email_confirm.setVisibility(View.VISIBLE);
+                            tv_note.setText(Html.fromHtml(getString(R.string.str_note, edt_email.getText().toString())));
+                        } else {
+                            Toast.makeText(SignupActivity.this, result.getString("message"), Toast.LENGTH_SHORT).show();
+                            CommonFunctions.changeactivity(SignupActivity.this, SignupActivity.class);
                         }
                     } catch (Exception e) {
                         e.printStackTrace();

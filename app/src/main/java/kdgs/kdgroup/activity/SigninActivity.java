@@ -66,9 +66,9 @@ public class SigninActivity extends BaseActivity {
                 "device_id":"151121dfhgdf"
             }*/
             if (edt_uname.getText().toString().trim().length() == 0) {
-                CommonFunctions.showSnack(this, getString(R.string.str_rgstr3));
+                Toast.makeText(this, R.string.str_rgstr3, Toast.LENGTH_SHORT).show();
             } else if (edt_pass.getText().toString().trim().length() == 0) {
-                CommonFunctions.showSnack(this, getString(R.string.str_rgstr4));
+                Toast.makeText(this, R.string.str_rgstr4, Toast.LENGTH_SHORT).show();
             } else {
                 JSONObject inputdata = new JSONObject();
                 inputdata.put(Constants.u_name, edt_uname.getText().toString().trim());

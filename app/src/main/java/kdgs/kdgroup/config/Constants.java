@@ -21,6 +21,5 @@ public class Constants {
     public static String u_password = "u_password";
     public static String u_firstname = "u_firstname";
     public static String u_lastname = "u_lastname";
-
     public static String user_id = "u_id";
 }

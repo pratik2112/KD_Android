@@ -83,7 +83,9 @@
                 android:id="@+id/ti_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_uname">
+                android:layout_below="@+id/ti_uname"
+                app:passwordToggleDrawable="@drawable/show_password_selector"
+                app:passwordToggleEnabled="true">
 
                 <EditText
                     android:id="@+id/edt_pass"
