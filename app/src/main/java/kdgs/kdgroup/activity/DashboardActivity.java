@@ -18,7 +18,6 @@ import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 import com.karumi.dexter.Dexter;
@@ -31,12 +30,12 @@ import com.karumi.dexter.listener.PermissionRequestErrorListener;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 import butterknife.BindView;
-import butterknife.Optional;
 import kdgs.kdgroup.R;
 import kdgs.kdgroup.base.BaseActivity;
 import kdgs.kdgroup.config.CommonFunctions;
 import kdgs.kdgroup.config.Constants;
 import kdgs.kdgroup.fragment.DashboardFragment;
+import kdgs.kdgroup.utills.CircleImageView;
 
 public class DashboardActivity extends BaseActivity implements OnNavigationItemSelectedListener {
 
@@ -49,6 +48,7 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
     private PermissionRequestErrorListener errorListener;
 
     public TextView tv_name, tv_uname, tv_phone, tv_email;
+    CircleImageView nav_img_profile_pic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,12 +74,14 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
             tv_uname = (TextView) navigationView.getHeaderView(0).findViewById(R.id.tv_uname);
             tv_phone = (TextView) navigationView.getHeaderView(0).findViewById(R.id.tv_phone);
             tv_email = (TextView) navigationView.getHeaderView(0).findViewById(R.id.tv_email);
+            nav_img_profile_pic = (CircleImageView) navigationView.getHeaderView(0).findViewById(R.id.nav_img_profile_pic);
 
             if (CommonFunctions.getPreference(DashboardActivity.this, Constants.isLogin, false)) {
                 tv_name.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uFirstname + " " + CommonFunctions.getloginresponse(this).data.uLastname));
                 tv_uname.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uName));
                 tv_phone.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uMobile));
                 tv_email.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uEmail));
+                CommonFunctions.setImageURL(this, nav_img_profile_pic, CommonFunctions.getloginresponse(this).data.uImage);
             } else {
                 tv_name.setText("");
                 tv_uname.setText("");
@@ -102,6 +104,7 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
                 tv_uname.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uName));
                 tv_phone.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uMobile));
                 tv_email.setText(Html.fromHtml(CommonFunctions.getloginresponse(this).data.uEmail));
+                CommonFunctions.setImageURL(this, nav_img_profile_pic, CommonFunctions.getloginresponse(this).data.uImage);
             }
         }
     }
