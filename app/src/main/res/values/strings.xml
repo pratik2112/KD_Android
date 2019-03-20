@@ -93,7 +93,7 @@
     <string name="str_comp_desc">Descirbe Complaint</string>
 
     <string name="str_dob">Date of Birth</string>
-    <string name="str_dmy">DD-MM-YYYY</string>
+    <string name="str_dmy">YYYY-MM-DD</string>
     <string name="str_c_adrs">Current Address Detail</string>
     <string name="str_pa_adrs">Permanent Address Detail</string>
     <string name="str_f_no">Flate No.</string>

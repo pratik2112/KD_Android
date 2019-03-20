@@ -84,13 +84,9 @@ public class SigninActivity extends BaseActivity {
                             if (result.getBoolean(Constants.status)) {
                                 Gson gson = new Gson();
                                 LoginResponse loginResponse = gson.fromJson(result.toString(), LoginResponse.class);
-                                //if (loginResponse.result) {
-                                    CommonFunctions.setPreference(SigninActivity.this, Constants.isLogin, true);
-                                    CommonFunctions.setPreference(getApplicationContext(), Constants.userdata, gson.toJson(loginResponse));
-                                    CommonFunctions.changeactivity(SigninActivity.this, DashboardActivity.class);
-                                /*} else {
-                                    CommonFunctions.showSnack(SigninActivity.this, loginResponse.message);
-                                }*/
+                                CommonFunctions.setPreference(SigninActivity.this, Constants.isLogin, true);
+                                CommonFunctions.setPreference(getApplicationContext(), Constants.userdata, gson.toJson(loginResponse));
+                                CommonFunctions.changeactivity(SigninActivity.this, DashboardActivity.class);
                             } else {
                                 Toast.makeText(SigninActivity.this, getString(R.string.invalid_usr_pwd), Toast.LENGTH_SHORT).show();
                             }

@@ -24,12 +24,9 @@ public class SplashActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     if (!CommonFunctions.getPreference(SplashActivity.this, Constants.isLogin, false)) {
-                        startActivity(new Intent(SplashActivity.this, DashboardActivity.class));
-                        finish();
+                        startActivity(new Intent(SplashActivity.this, IntroActivity.class));
                     } else {
-                        if (CommonFunctions.getloginresponse(SplashActivity.this) != null) {
-                            startActivity(new Intent(SplashActivity.this, IntroActivity.class));
-                        }
+                        startActivity(new Intent(SplashActivity.this, DashboardActivity.class));
                     }
                 }
             }, SPLASH_TIME_OUT);

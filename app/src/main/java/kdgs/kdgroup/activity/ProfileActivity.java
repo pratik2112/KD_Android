@@ -94,4 +94,9 @@ public class ProfileActivity extends BaseActivity {
         Intent intent = new Intent(this, EditProfileActivity.class);
         this.startActivityForResult(intent, 600);
     }
+
+    @OnClick(R.id.cv_adrs)
+    public void adrsClick() {
+        //startActivity(new Intent(this, MyaddressActivity.class));
+    }
 }

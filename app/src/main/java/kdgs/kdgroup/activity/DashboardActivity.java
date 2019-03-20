@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
 import android.support.v4.app.Fragment;
@@ -19,6 +20,7 @@ import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
@@ -46,7 +48,7 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
     @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
     private PermissionRequestErrorListener errorListener;
-
+    boolean doubleBackToExitPressedOnce = false;
     public TextView tv_name, tv_uname, tv_phone, tv_email;
     CircleImageView nav_img_profile_pic;
 
@@ -111,10 +113,26 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
 
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+        /*if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }*/
+
+        Fragment f = getSupportFragmentManager().findFragmentById(R.id.frame_container);
+        if (f != null && f instanceof DashboardFragment) {
+            if (doubleBackToExitPressedOnce) {
+                finishAffinity();
+                return;
+            }
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, getString(R.string.msg_press_back_twice), Toast.LENGTH_SHORT).show();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce = false;
+                }
+            }, 2000);
         }
     }
 
