@@ -538,7 +538,6 @@ public class CommonFunctions {
         return EMAIL_ADDRESS_PATTERN.matcher(email).matches();
     }
 
-
     public static String getDeviceMenufacture() {
         String dm = "";
         try {

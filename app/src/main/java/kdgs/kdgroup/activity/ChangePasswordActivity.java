@@ -72,7 +72,7 @@ public class ChangePasswordActivity extends BaseActivity {
             inputdata.put(Constants.old_password, edt_old_pass.getText().toString().trim());
             inputdata.put(Constants.new_password, edt_new_pass.getText().toString().trim());
 
-            WebService webService = new WebService(KDGConfig.WEBURL + KDGConfig.APIURL + KDGConfig.chngpwdUserURL, inputdata, true, this);
+            WebService webService = new WebService(KDGConfig.WEBURL + KDGConfig.APIURL + KDGConfig.chngpwdURL, inputdata, true, this);
             webService.getData(Request.Method.POST, new WebService.OnResult() {
                 @Override
                 public void OnSuccess(JSONObject result) {

@@ -78,6 +78,12 @@
             android:theme="@style/AppTheme_Action"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
+            android:name=".activity.AddressActivity"
+            android:label="@string/str_p_adrs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Action"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
             android:name=".activity.ComplaintActivity"
             android:label="@string/str_m_comp"
             android:screenOrientation="portrait"

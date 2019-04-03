@@ -2,7 +2,6 @@ package kdgs.kdgroup.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,7 +11,6 @@ import butterknife.OnClick;
 import kdgs.kdgroup.R;
 import kdgs.kdgroup.base.BaseActivity;
 import kdgs.kdgroup.config.CommonFunctions;
-import kdgs.kdgroup.config.Constants;
 import kdgs.kdgroup.model.LoginResponse;
 import kdgs.kdgroup.utills.CircleImageView;
 
@@ -98,6 +96,6 @@ public class ProfileActivity extends BaseActivity {
 
     @OnClick(R.id.cv_adrs)
     public void adrsClick() {
-        //startActivity(new Intent(this, MyaddressActivity.class));
+        startActivity(new Intent(this, AddressActivity.class));
     }
 }
