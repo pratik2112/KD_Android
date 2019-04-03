@@ -64,6 +64,7 @@ public class ProfileActivity extends BaseActivity {
                 tv_uname.setText(R.string.txt_guest);
                 tv_phone.setText(R.string.txt_guest);
                 tv_email.setText(R.string.txt_guest);
+                nav_img_profile_pic.setImageResource(R.drawable.unknown);
             }
         } catch (Exception e) {
             e.printStackTrace();

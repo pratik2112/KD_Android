@@ -94,7 +94,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/str_pwd"
-                    android:text="jatin248"
+                    android:text="J@tin248"
                     android:imeOptions="actionDone"
                     android:inputType="textPassword"
                     android:maxLines="1"

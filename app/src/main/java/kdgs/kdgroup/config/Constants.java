@@ -9,6 +9,7 @@ public class Constants {
     public static String device_id = "device_id";
 
     public static String status = "status";
+    public static String message = "message";
     public static String error = "error";
     public static String otp = "otp";
     public static String otpData = "OtpData";
@@ -25,4 +26,6 @@ public class Constants {
     public static String u_gender = "u_gender";
     public static String image = "image";
     public static String user_id = "u_id";
+    public static String old_password = "old_password";
+    public static String new_password = "new_password";
 }

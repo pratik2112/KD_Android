@@ -10,4 +10,6 @@ public class KDGConfig {
     public static String registerURL = "userRegister";
     public static String loginURL = "login";
     public static String updateUserURL = "profileUpdate";
+    public static String chngpwdUserURL = "changePassword";
+    public static String resetpwdUserURL = "forgotPassword";
 }

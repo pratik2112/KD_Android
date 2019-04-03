@@ -194,9 +194,7 @@ public class DashboardActivity extends BaseActivity implements OnNavigationItemS
             case R.id.nav_logout:
                 CommonFunctions.setPreference(DashboardActivity.this, Constants.isLogin, false);
                 CommonFunctions.setPreference(DashboardActivity.this, Constants.userdata, "");
-                startActivity(new Intent(this, SigninActivity.class));
-                this.finish();
-                break;
+                CommonFunctions.changeactivity(DashboardActivity.this, SigninActivity.class);
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
