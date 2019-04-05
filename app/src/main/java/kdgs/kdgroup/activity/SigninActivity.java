@@ -24,12 +24,8 @@ import kdgs.kdgroup.model.LoginResponse;
 
 public class SigninActivity extends BaseActivity {
 
-    @BindView(R.id.ti_uname)
-    TextInputLayout ti_uname;
     @BindView(R.id.edt_uname)
     EditText edt_uname;
-    @BindView(R.id.ti_pass)
-    TextInputLayout ti_pass;
     @BindView(R.id.edt_pass)
     EditText edt_pass;
     @BindView(R.id.btn_signin)

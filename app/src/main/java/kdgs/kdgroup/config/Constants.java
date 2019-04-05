@@ -8,6 +8,7 @@ public class Constants {
     public static String device_type = "device_type";
     public static String device_id = "device_id";
 
+    public static String from = "from";
     public static String status = "status";
     public static String message = "message";
     public static String error = "error";
@@ -32,4 +33,10 @@ public class Constants {
     public static String pincode = "pincode";
     public static String address = "address";
     public static String type = "type";
+    public static String getAddressdata = "getAddressdata";
+    public static String addressData = "addressData";
+
+    public static String Home = "Home";
+    public static String Office = "Office";
+    public static String Other = "Other";
 }

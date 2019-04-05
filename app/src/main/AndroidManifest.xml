@@ -17,6 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme_Action"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.AddAddressActivity"></activity>
         <activity
             android:name=".activity.SplashActivity"
             android:screenOrientation="portrait"
@@ -51,7 +52,7 @@
             android:name=".activity.DashboardActivity"
             android:label="@string/str_m_dashboard"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme_Action.NoActionBar"
+            android:theme="@style/AppTheme_Action"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
             android:name=".activity.ProfileActivity"

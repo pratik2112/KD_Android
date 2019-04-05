@@ -83,11 +83,6 @@ public class ProfileActivity extends BaseActivity {
         }
     }
 
-    @OnClick(R.id.cv_chng_pwd)
-    public void chngPwdClick() {
-        startActivity(new Intent(ProfileActivity.this, ChangePasswordActivity.class));
-    }
-
     @OnClick(R.id.iv_edit)
     public void editProfileClick() {
         Intent intent = new Intent(this, EditProfileActivity.class);

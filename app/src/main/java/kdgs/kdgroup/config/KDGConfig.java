@@ -9,9 +9,11 @@ public class KDGConfig {
     public static String otpURL = "generateotp";
     public static String registerURL = "userRegister";
     public static String loginURL = "login";
+    public static String getBananerURL = "getBananer";
     public static String updateUserURL = "profileUpdate";
     public static String chngpwdURL = "changePassword";
     public static String resetpwdURL = "forgotPassword";
     public static String checkEmailURL = "forgotCheckEmail";
     public static String addAddressURL = "addAddress";
+    public static String getAddressURL = "getAddress";
 }

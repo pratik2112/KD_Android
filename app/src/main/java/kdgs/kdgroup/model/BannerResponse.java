@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class AddressResponse {
+public class BannerResponse {
 
     @SerializedName("data")
     public List<Data> data;
@@ -16,15 +16,9 @@ public class AddressResponse {
     public static class Data {
         @SerializedName("created_at")
         public String createdAt;
-        @SerializedName("type")
-        public String type;
-        @SerializedName("address")
-        public String address;
-        @SerializedName("pincode")
-        public String pincode;
-        @SerializedName("u_id")
-        public String uId;
-        @SerializedName("ua_id")
-        public String uaId;
+        @SerializedName("b_name")
+        public String bName;
+        @SerializedName("b_id")
+        public String bId;
     }
 }

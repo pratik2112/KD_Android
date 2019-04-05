@@ -694,7 +694,7 @@ public class CommonFunctions {
             int heightD = displayMetrics.heightPixels;
             int w = width;
             int h = height;
-            int mh = (int) ((h * widthD * 0.95) / w);
+            int mh = (int) ((h * widthD) / w);
             return mh;
         } catch (Exception e) {
             e.printStackTrace();

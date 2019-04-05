@@ -204,25 +204,4 @@
                 android:textSize="@dimen/sp_12" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cv_chng_pwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/tv_10"
-        android:layout_marginTop="@dimen/tv_10"
-        android:layout_marginRight="@dimen/tv_10"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/tv_5"
-        app:cardElevation="0dp">
-
-        <TextView
-            style="@style/lblRegular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/tv_8"
-            android:text="@string/str_m_chng_pwd"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/sp_16" />
-    </android.support.v7.widget.CardView>
 </LinearLayout>

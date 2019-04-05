@@ -7,25 +7,17 @@
 
     <include layout="@layout/header_lay" />
 
-    <TextView
-        android:id="@+id/tv_addadress"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
         android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dip"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="@string/addaddress_title1"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_18" />
+        android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dip"
-        android:layout_marginRight="5dip"
-        android:layout_marginTop="5dip" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_5" />
+    </android.support.v4.widget.SwipeRefreshLayout>
 
     <LinearLayout
         android:id="@+id/ll_empty_view"

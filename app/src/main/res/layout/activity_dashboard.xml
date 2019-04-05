@@ -1,29 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:background="@color/main_bg"
+    android:scrollbars="none"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <include
-        layout="@layout/app_bar_dashboard"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sp_10"
+        android:orientation="vertical">
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@color/colorAccent"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header"
-        app:itemIconTint="@color/drawer_item"
-        app:itemTextAppearance="@style/NavigationDrawerStyle"
-        app:itemTextColor="@color/colorPrimary"
-        app:menu="@menu/slide_navigation" />
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/lblSemiB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_8"
+            android:layout_marginBottom="@dimen/tv_8"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="@string/str_welcome"
+            android:textSize="@dimen/sp_14" />
 
-</android.support.v4.widget.DrawerLayout>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginTop="@dimen/tv_5"
+            app:cardCornerRadius="@dimen/tv_10">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <kdgs.kdgroup.utills.AutoScrollViewPager
+                    android:id="@+id/info_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp" />
+
+                <kdgs.kdgroup.utills.CirclePageIndicator
+                    android:id="@+id/info_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/tv_15" />
+            </FrameLayout>
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/tv_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tv_5"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_complaint"
+                        style="@style/rippleCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/tv_5"
+                        android:layout_weight="0.3"
+                        app:cardCornerRadius="@dimen/tv_10"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/tv_10"
+                                android:src="@drawable/ic_complaint"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                style="@style/lblRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:maxLines="1"
+                                android:padding="@dimen/tv_8"
+                                android:text="@string/str_m_comp"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_product"
+                        style="@style/rippleCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/tv_5"
+                        android:layout_weight="0.3"
+                        app:cardCornerRadius="@dimen/tv_10"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/tv_10"
+                                android:src="@drawable/ic_product"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                style="@style/lblRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:maxLines="1"
+                                android:padding="@dimen/tv_8"
+                                android:text="@string/str_m_product"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_feedback"
+                        style="@style/rippleCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        app:cardCornerRadius="@dimen/tv_10"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/tv_10"
+                                android:src="@drawable/ic_feedback"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                style="@style/lblRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:maxLines="1"
+                                android:padding="@dimen/tv_8"
+                                android:text="@string/str_m_feedback"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tv_10"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_profile"
+                        style="@style/rippleCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/tv_5"
+                        android:layout_weight="0.3"
+                        app:cardCornerRadius="@dimen/tv_10"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/tv_10"
+                                android:src="@drawable/ic_profile"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                style="@style/lblRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:maxLines="1"
+                                android:padding="@dimen/tv_8"
+                                android:text="@string/str_m_prof"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_chng_pwd"
+                        style="@style/rippleCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/tv_5"
+                        android:layout_weight="0.3"
+                        app:cardCornerRadius="@dimen/tv_10"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/tv_10"
+                                android:src="@drawable/ic_pwd"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                style="@style/lblRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="@dimen/tv_8"
+                                android:text="@string/str_m_chng_pwd"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_contact"
+                        style="@style/rippleCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        app:cardCornerRadius="@dimen/tv_10"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/tv_10"
+                                android:src="@drawable/ic_contact"
+                                android:tint="@color/colorPrimary" />
+
+                            <TextView
+                                style="@style/lblRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:maxLines="1"
+                                android:padding="@dimen/tv_8"
+                                android:text="@string/str_m_contact"
+                                android:textSize="@dimen/sp_13" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

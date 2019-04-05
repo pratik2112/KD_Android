@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
@@ -7,5 +8,13 @@
         android:icon="@drawable/ic_share"
         android:iconTint="@color/white"
         android:title="@string/str_m_share"
-        app:showAsAction="ifRoom|collapseActionView" />
+        app:showAsAction="ifRoom|collapseActionView"
+        tools:targetApi="o" />
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/ic_logout"
+        android:iconTint="@color/white"
+        android:title="@string/str_m_logout"
+        app:showAsAction="ifRoom|collapseActionView"
+        tools:targetApi="o" />
 </menu>

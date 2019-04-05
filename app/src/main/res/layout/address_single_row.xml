@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/tv_10"
+    android:layout_marginTop="@dimen/tv_5"
+    android:layout_marginRight="@dimen/tv_10"
+    android:layout_marginBottom="@dimen/tv_5"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/tv_10"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/lblSemiB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/tv_addres_type"
+                    style="@style/lblRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+                    android:background="@drawable/address_type_bg"
+                    android:gravity="center"
+                    android:minWidth="70dip"
+                    android:padding="@dimen/tv_5"
+                    android:textAllCaps="true"
+                    android:textColor="@color/addresstype_bg3"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/lblRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:textColor="@color/addresstype_bg3"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/tv_pincode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:textColor="@color/addresstype_bg3"
+                android:textSize="@dimen/sp_15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_5"
+                android:gravity="right">
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    android:layout_width="90dip"
+                    android:layout_height="30dip"
+                    android:background="@drawable/btn_white_focus_bg"
+                    android:text="@string/str_edit"
+                    android:textColor="@drawable/btn_white_text_color" />
+
+                <Button
+                    android:id="@+id/btn_delete"
+                    android:layout_width="90dip"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/btn_white_focus_bg"
+                    android:text="@string/str_delet"
+                    android:textColor="@drawable/btn_white_text_color" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

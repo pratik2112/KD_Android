@@ -16,6 +16,13 @@
     <color name="transparent">#00000000</color>
     <color name="divider">#424242</color>
 
+    <color name="addresstype_bg1">#E8E8E8</color>
+    <color name="addresstype_bg2">#9a9a9a</color>
+    <color name="addresstype_bg3">#666</color>
+    <color name="addresstype_bg4">#444</color>
+    <color name="addresstype_bg5">#4D4D4D</color>
+    <color name="addresstype_bg6">#808080</color>
+
     <!-- Drawer Menu -->
     <color name="drawer_item_checked">@color/colorPrimary</color>
     <color name="drawer_item_default">@color/white</color>

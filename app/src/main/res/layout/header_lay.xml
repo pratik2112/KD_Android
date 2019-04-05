@@ -37,6 +37,16 @@
         android:tint="@color/white" />
 
     <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="56dip"
+        android:paddingLeft="@dimen/tv_10"
+        android:paddingRight="@dimen/tv_10"
+        android:src="@drawable/ic_add"
+        android:tint="@color/white"
+        android:visibility="gone" />
+
+    <ImageView
         android:id="@+id/iv_save"
         android:layout_width="wrap_content"
         android:layout_height="56dip"
