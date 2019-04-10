@@ -20,7 +20,7 @@
     <string name="msg_kd">Message From KD +</string>
     <string name="no_record_found">No record found…</string>
 
-    <string name="str_title">KD Digital</string>
+        <string name="str_title">KD Digital</string>
     <string name="str_desc">KD Digital has developed as the prominent IT products solution provider combining experience and ability to implement. </string>
     <string name="str_forgot">Forgot Password ?</string>
     <string name="str_welcome">Welcome, </string>
@@ -141,6 +141,13 @@
     <string name="addaddress_title16">Landmark/Locality, City*</string>
     <string name="addaddress_title17">City*</string>
 
+    <string name="complaint_title1">Complaint No : </string>
+    <string name="complaint_title2">Category : </string>
+    <string name="complaint_title3">Complaint : </string>
+    <string name="complaint_title4">Complaint Start Date: </string>
+    <string name="complaint_title5">Complaint End Date : </string>
+    <string name="complaint_title6">Status : </string>
+
     <string name="invalid_otp">"Invalid OTP!!!"</string>
     <string name="invalid_usr_pwd">"Invalid User Detail!!!"</string>
 
@@ -148,4 +155,8 @@
     <string name="google_url">https://play.google.com/store/apps/details?id=</string>
 
     <string name="storage_permission1">If you reject permission, you can not use this call feature.</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyD_FlGaT2tUn6-TYGfd6-looXv_An9kwps
+    </string>
 </resources>

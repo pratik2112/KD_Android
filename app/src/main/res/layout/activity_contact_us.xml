@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <include
+        android:id="@+id/main_head"
+        layout="@layout/header_lay" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_head"
+        android:orientation="vertical"
+        android:padding="@dimen/tv_10">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_collapseMode="parallax" />
+        <!--<fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/tv_10"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/tv_5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_5">
+
+                <ImageView
+                    android:id="@+id/img_company_name"
+                    android:layout_width="@dimen/tv_15"
+                    android:layout_height="@dimen/tv_15"
+                    android:src="@drawable/location"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/img_company_name"
+                    android:text="companyname"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_5">
+
+                <ImageView
+                    android:id="@+id/img_location"
+                    android:layout_width="@dimen/tv_20"
+                    android:layout_height="@dimen/tv_20"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_my_address" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/img_location"
+                    android:text="contactaddress"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_5">
+
+                <ImageView
+                    android:id="@+id/img_phone_sales"
+                    android:layout_width="@dimen/tv_20"
+                    android:layout_height="@dimen/tv_20"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_telephone" />
+
+                <TextView
+                    android:id="@+id/cu_txt_title_sales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/img_phone_sales"
+                    android:text="Sales :"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/cu_txt_contact_number_sales_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/cu_txt_title_sales"
+                    android:text="contactnumbersales1"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/cu_txt_contact_number_sales_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/cu_txt_contact_number_sales_1"
+                    android:text="cont2"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_5">
+
+                <ImageView
+                    android:id="@+id/img_phone_service"
+                    android:layout_width="@dimen/tv_20"
+                    android:layout_height="@dimen/tv_20"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_telephone" />
+
+                <TextView
+                    android:id="@+id/cu_txt_title_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/img_phone_service"
+                    android:text="Service :"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/cu_txt_contact_number_service_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/cu_txt_title_service"
+                    android:text="contactnumberservice1"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/cu_txt_contact_number_service_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/cu_txt_contact_number_service_1"
+                    android:text="cont2"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_5">
+
+                <ImageView
+                    android:id="@+id/img_phone_field_service"
+                    android:layout_width="@dimen/tv_20"
+                    android:layout_height="@dimen/tv_20"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_telephone" />
+
+                <TextView
+                    android:id="@+id/cu_txt_title_field_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/img_phone_field_service"
+                    android:text="Field Service :"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/cu_txt_contact_number_field_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/cu_txt_title_field_service"
+                    android:text="field service no1"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_5">
+
+                <ImageView
+                    android:id="@+id/img_email"
+                    android:layout_width="@dimen/tv_20"
+                    android:layout_height="@dimen/tv_20"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_email" />
+
+                <TextView
+                    android:id="@+id/cu_txt_email_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/tv_5"
+                    android:layout_toRightOf="@+id/img_email"
+                    android:text="contactemail"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

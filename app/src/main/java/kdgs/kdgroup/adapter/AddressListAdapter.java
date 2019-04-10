@@ -8,16 +8,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.google.gson.Gson;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import kdgs.kdgroup.R;
 import kdgs.kdgroup.activity.AddAddressActivity;
+import kdgs.kdgroup.activity.AddressActivity;
 import kdgs.kdgroup.config.CommonFunctions;
 import kdgs.kdgroup.config.Constants;
+import kdgs.kdgroup.config.KDGConfig;
+import kdgs.kdgroup.config.WebService;
 import kdgs.kdgroup.model.AddressResponse;
 
 public class AddressListAdapter extends RecyclerView.Adapter<AddressListAdapter.MyViewHolder> {
@@ -73,6 +80,56 @@ public class AddressListAdapter extends RecyclerView.Adapter<AddressListAdapter.
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
+                }
+            });
+
+            holder.btn_delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        deleteAddress(adrsData, position);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void deleteAddress(AddressResponse.Data adrsData, int position) {
+        try {
+            String adrsid = "";
+            if (adrsData != null) {
+                adrsid = adrsData.uaId;
+            } else
+                adrsid = "";
+
+            JSONObject inputdata = new JSONObject();
+            inputdata.put(Constants.ua_id, adrsid);
+
+            WebService webService = new WebService(KDGConfig.WEBURL + KDGConfig.APIURL + KDGConfig.deleteAddressURL, inputdata, true, mContext);
+            webService.getData(Request.Method.POST, new WebService.OnResult() {
+                @Override
+                public void OnSuccess(JSONObject result) {
+                    try {
+                        if (result.getBoolean(Constants.status)) {
+                            if (mContext instanceof AddressActivity) {
+                                ((AddressActivity) mContext).getAddressList();
+                                Toast.makeText(mContext, result.getString(Constants.message), Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(mContext, R.string.address_error1, Toast.LENGTH_SHORT).show();
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void OnFail(String error) {
+                    Toast.makeText(mContext, error, Toast.LENGTH_SHORT).show();
                 }
             });
         } catch (Exception e) {

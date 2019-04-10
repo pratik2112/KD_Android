@@ -225,13 +225,14 @@ public class DashboardActivity extends BaseActivity implements View.OnClickListe
                 startActivity(new Intent(this, ChangePasswordActivity.class));
                 break;
             case R.id.cv_contact:
-                if (CommonFunctions.getPreference(DashboardActivity.this, Constants.callPermission, false)) {
+                /*if (CommonFunctions.getPreference(DashboardActivity.this, Constants.callPermission, false)) {
                     Intent intent = new Intent(Intent.ACTION_DIAL);
                     intent.setData(Uri.parse("tel:9999999999"));
                     startActivity(intent);
                 } else {
                     callPermissionListeners();
-                }
+                }*/
+                startActivity(new Intent(this, ContactUsActivity.class));
                 break;
         }
     }

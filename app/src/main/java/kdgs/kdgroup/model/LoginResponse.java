@@ -38,6 +38,8 @@ public class LoginResponse {
         public String uMobile;
         @SerializedName("u_image")
         public String uImage;
+        @SerializedName("u_adres")
+        public String uAdres;
         @SerializedName("u_dob")
         public String uDob;
         @SerializedName("u_gander")

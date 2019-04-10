@@ -29,6 +29,10 @@ public class ProfileActivity extends BaseActivity {
     TextView tv_phone;
     @BindView(R.id.tv_email)
     TextView tv_email;
+    @BindView(R.id.tv_dob)
+    TextView tv_dob;
+    @BindView(R.id.tv_p_adrs)
+    TextView tv_p_adrs;
 
     @BindView(R.id.nav_img_profile_pic)
     CircleImageView nav_img_profile_pic;
@@ -56,12 +60,16 @@ public class ProfileActivity extends BaseActivity {
                 tv_uname.setText(loginResponse.data.uName);
                 tv_phone.setText(loginResponse.data.uMobile);
                 tv_email.setText(loginResponse.data.uEmail);
+                tv_dob.setText(loginResponse.data.uDob);
+                tv_p_adrs.setText(loginResponse.data.uAdres.replace("|", "\n"));
                 CommonFunctions.setImageURL(this, nav_img_profile_pic, loginResponse.data.uImage);
             } else {
                 tv_name.setText(R.string.txt_guest);
                 tv_uname.setText(R.string.txt_guest);
                 tv_phone.setText(R.string.txt_guest);
                 tv_email.setText(R.string.txt_guest);
+                tv_dob.setText("");
+                tv_p_adrs.setText("");
                 nav_img_profile_pic.setImageResource(R.drawable.unknown);
             }
         } catch (Exception e) {

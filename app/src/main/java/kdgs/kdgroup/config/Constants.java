@@ -30,6 +30,7 @@ public class Constants {
     public static String old_password = "old_password";
     public static String new_password = "new_password";
     public static String ua_id = "ua_id";
+    public static String uc_id = "uc_id";
     public static String pincode = "pincode";
     public static String address = "address";
     public static String type = "type";

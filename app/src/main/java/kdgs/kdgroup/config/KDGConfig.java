@@ -16,4 +16,6 @@ public class KDGConfig {
     public static String checkEmailURL = "forgotCheckEmail";
     public static String addAddressURL = "addAddress";
     public static String getAddressURL = "getAddress";
+    public static String deleteAddressURL = "deleteAddress";
+    public static String getComplainDetailURL = "getComplainDetail";
 }
