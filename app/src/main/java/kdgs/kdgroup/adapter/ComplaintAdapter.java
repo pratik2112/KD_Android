@@ -56,7 +56,7 @@ public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.MyVi
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         try {
             final ComplaintResponse.Data complaintData = complaintDataList.get(position);
-            holder.tv_sno.setText("1");
+            holder.tv_sno.setText(position + 1 + ". ");
             holder.tv_comp_no.setText(complaintData.ucNo);
             holder.tv_comp_name.setText(complaintData.ucTitle);
             holder.tv_comp.setText(complaintData.ucDesc);
