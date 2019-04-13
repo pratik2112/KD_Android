@@ -1,6 +1,7 @@
 package kdgs.kdgroup.adapter;
 
 import android.app.Activity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,14 +14,17 @@ import java.util.List;
 import kdgs.kdgroup.R;
 import kdgs.kdgroup.model.ComplaintResponse;
 
+import static kdgs.kdgroup.config.CommonFunctions.parseDateToddMMyyyy;
+
 public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.MyViewHolder> {
 
     private Activity mContext;
-    ComplaintResponse myaddresslist;
-    List<ComplaintResponse.Data> addressList;
+    ComplaintResponse complaintlist;
+    List<ComplaintResponse.Data> complaintDataList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView tv_sno, tv_comp_no, tv_comp_name, tv_comp, tv_comp_sdt, tv_comp_edt, tv_comp_status;
+        public CardView cv_comp_detail;
 
         public MyViewHolder(View view) {
             super(view);
@@ -31,14 +35,15 @@ public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.MyVi
             tv_comp_sdt = (TextView) view.findViewById(R.id.tv_comp_sdt);
             tv_comp_edt = (TextView) view.findViewById(R.id.tv_comp_edt);
             tv_comp_status = (TextView) view.findViewById(R.id.tv_comp_status);
+            cv_comp_detail = view.findViewById(R.id.cv_comp_detail);
         }
     }
 
-    public ComplaintAdapter(Activity mContext, ComplaintResponse myaddresslist) {
+    public ComplaintAdapter(Activity mContext, ComplaintResponse complaintlist) {
         this.mContext = mContext;
-        this.myaddresslist = myaddresslist;
-        addressList = new ArrayList<>();
-        addressList.addAll(myaddresslist.data);
+        this.complaintlist = complaintlist;
+        complaintDataList = new ArrayList<>();
+        complaintDataList.addAll(complaintlist.data);
     }
 
     @Override
@@ -50,15 +55,23 @@ public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.MyVi
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         try {
-            final ComplaintResponse.Data complaintData = addressList.get(position);
+            final ComplaintResponse.Data complaintData = complaintDataList.get(position);
             holder.tv_sno.setText("1");
             holder.tv_comp_no.setText(complaintData.ucNo);
             holder.tv_comp_name.setText(complaintData.ucTitle);
             holder.tv_comp.setText(complaintData.ucDesc);
-            holder.tv_comp_sdt.setText(complaintData.createdAt);
-            holder.tv_comp_edt.setText(complaintData.modifiedAt);
+            holder.tv_comp_sdt.setText(parseDateToddMMyyyy("yyyy-MM-dd HH:mm:ss", "dd/MM/yyyy HH:mm", complaintData.createdAt));
+            holder.tv_comp_edt.setText(parseDateToddMMyyyy("yyyy-MM-dd HH:mm:ss", "dd/MM/yyyy HH:mm", complaintData.modifiedAt));
             holder.tv_comp_status.setText(complaintData.status);
-
+            holder.cv_comp_detail.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -66,6 +79,6 @@ public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.MyVi
 
     @Override
     public int getItemCount() {
-        return myaddresslist.data.size();
+        return complaintlist.data.size();
     }
 }

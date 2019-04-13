@@ -110,6 +110,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme_Action"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".activity.ComplaintDetailActivity"
+            android:label="@string/str_m_comp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Action"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
     </application>
 
 </manifest>

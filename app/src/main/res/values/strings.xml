@@ -20,7 +20,7 @@
     <string name="msg_kd">Message From KD +</string>
     <string name="no_record_found">No record found…</string>
 
-        <string name="str_title">KD Digital</string>
+    <string name="str_title">KD Digital</string>
     <string name="str_desc">KD Digital has developed as the prominent IT products solution provider combining experience and ability to implement. </string>
     <string name="str_forgot">Forgot Password ?</string>
     <string name="str_welcome">Welcome, </string>
@@ -147,6 +147,21 @@
     <string name="complaint_title4">Complaint Start Date: </string>
     <string name="complaint_title5">Complaint End Date : </string>
     <string name="complaint_title6">Status : </string>
+
+    <string name="complaint_detail1">Complaint Status / Information</string>
+    <string name="complaint_detail2">Complaint ID</string>
+    <string name="complaint_detail3">Complaint Date &amp; Time</string>
+    <string name="complaint_detail4">Complaint Status</string>
+    <string name="complaint_detail5">Complaint Category</string>
+    <string name="complaint_detail6">Complaint Description</string>
+    <string name="complaint_detail7">Complaint Name</string>
+    <string name="complaint_detail8">Complaint Address</string>
+    <string name="complaint_detail9">Complaint Mobile Number</string>
+    <string name="complaint_detail10">Complaint Assignment Details</string>
+    <string name="complaint_detail11">Employee Name</string>
+    <string name="complaint_detail12">Contact Number</string>
+    <string name="complaint_detail13">Compliance Date &amp; Time</string>
+    <string name="complaint_detail14">Remarks</string>
 
     <string name="invalid_otp">"Invalid OTP!!!"</string>
     <string name="invalid_usr_pwd">"Invalid User Detail!!!"</string>

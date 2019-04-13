@@ -31,11 +31,14 @@ public class Constants {
     public static String new_password = "new_password";
     public static String ua_id = "ua_id";
     public static String uc_id = "uc_id";
+    public static String uc_no = "uc_no";
     public static String pincode = "pincode";
     public static String address = "address";
     public static String type = "type";
     public static String getAddressdata = "getAddressdata";
     public static String addressData = "addressData";
+    public static String complaintData = "complaintData";
+    public static final String SELECTED_ITEM = "select_Item";
 
     public static String Home = "Home";
     public static String Office = "Office";

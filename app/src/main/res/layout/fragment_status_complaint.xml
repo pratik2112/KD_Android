@@ -1,69 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/main_bg"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <android.support.v7.widget.CardView
+    <FrameLayout
+        android:id="@+id/frm_complain_status"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/tv_10"
-        android:layout_marginTop="@dimen/tv_10"
-        android:layout_marginRight="@dimen/tv_10"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/tv_5"
-        app:cardElevation="@dimen/tv_5">
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/ti_tic_no"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/tv_10">
-
-            <EditText
-                android:id="@+id/edt_tic_no"
-                style="@style/lblRegular"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/str_tic_no"
-                android:imeOptions="actionDone"
-                android:inputType="text"
-                android:maxLines="1"
-                android:singleLine="true" />
-        </android.support.design.widget.TextInputLayout>
-    </android.support.v7.widget.CardView>
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
 
     <LinearLayout
-        android:id="@+id/ll_signin"
+        android:id="@+id/ll_complain_status"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/tv_20"
-        android:layout_marginTop="@dimen/tv_10"
-        android:layout_marginRight="@dimen/tv_20"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="@dimen/tv_5">
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_status"
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="40dip"
-            android:background="@drawable/btn_update_bg"
-            android:text="@string/str_comp_stat"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_15" />
-
-        <Button
-            android:id="@+id/btn_clear"
-            android:layout_width="match_parent"
-            android:layout_height="40dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tv_10"
             android:layout_marginTop="@dimen/tv_10"
-            android:background="@drawable/btn_update_bg"
-            android:text="@string/dialog_clear_btn"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_15" />
+            android:layout_marginRight="@dimen/tv_10"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/tv_5"
+            app:cardElevation="@dimen/tv_5">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_tic_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tv_10">
+
+                <EditText
+                    android:id="@+id/edt_tic_no"
+                    style="@style/lblRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/str_tic_no"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/ll_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/tv_20"
+            android:layout_marginTop="@dimen/tv_10"
+            android:layout_marginRight="@dimen/tv_20"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/tv_5">
+
+            <Button
+                android:id="@+id/btn_status"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="@drawable/btn_update_bg"
+                android:text="@string/str_comp_stat"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15" />
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="@dimen/tv_10"
+                android:background="@drawable/btn_update_bg"
+                android:text="@string/dialog_clear_btn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
